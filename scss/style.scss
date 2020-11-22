@@ -86,15 +86,17 @@ body {
         }
     }
     >.all-menu-info{
+        //display: none;
         position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
         background-color: $mainColor-1;
+        color: rgba(255, 255, 255, 0.5);
         transition: .5s;
         z-index: 97;
-        &.on{
+        &:hover, :focus{
             top: 0;
             .all-menu-info-wrap{
                 &::before, &::after{
@@ -126,34 +128,74 @@ body {
                 width: 0%;
                 height: 0%;
                 bottom: 50px;
-                right: 80px;
+                right: 50px;
                 border-bottom: 2px solid #fff;
                 border-right: 2px solid #fff;
                 opacity: 0;
                 transition: .5s;
             }
+            >.all-menu-lnfo-logo{
+                position: absolute;
+                font-size: 36px;
+                font-family: 'Nanum Myeongjo', sans-serif;
+                top: 95px;
+                left: 95px;
+                h1 {
+                    em {
+                        color: $mainColor-2;
+                    }
+                }
+            }
             >ul{
                 width: 1200px;
                 height: 100%;
                 position: relative;
-                padding: 90px;
+                padding: 60px;
                 text-align: center;
                 overflow: hidden;
                 clear: both;
                 margin: 0 auto;
                 >li{
                     float: left;
+                    margin-top: 20vh;
+                    margin-right: 69px;
+                    transition: all .5s;
+                    &:last-child{
+                        margin-right: 0px;
+                    }
+                    &:hover{
+                        color: #fff;
+                    }
                     >a{
                         position: relative;
                         z-index: 99;
-                        font-size: 34px;
+                        font-size: 28px;
                     }
                     >ul{
+                        padding-top: 20px;
                         >li{
+                            padding-bottom: 10px;
                             a{
                                 position: relative;
                                 z-index: 99;
                                 font-size: 20px;
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    width: 0%;
+                                    height: 1px;
+                                    background-color: #fff;
+                                    bottom: 0px;
+                                    left: 0;
+                                    transition: width 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+                                    -webkit-transition: width 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+                                }
+                                &:hover{
+                                    color: $mainColor-2;
+                                    &::after{
+                                        width: 100%;
+                                    }
+                                }
                             }
                         }
                     }
