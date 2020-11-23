@@ -30,14 +30,10 @@ function calendarFnc() {
         },
     });
     var Day = (calendar.datepicker("getDate"));
-    Day.getDate()
-    Day.getMonth()
-    Day.getFullYear()
-    // console.log(calendar.datepicker("getDate"));
-    // console.log(calendar.datepicker("getDate").getDate());
-    // console.log(calendar.datepicker("getDate").getMonth());
-    // console.log(calendar.datepicker("getDate").getYear());
+    $('.row3-today').html(Day.getFullYear() + '년 ' + (Day.getMonth() + 1) + '월 ' + Day.getDate() + '일');
+    Day.getDate();
 }
+
 //row4-subslide(bxSlider)
 function subslideFnc() {
     $('.row4-subslide').bxSlider({
@@ -53,6 +49,7 @@ function subslideFnc() {
         controls: true
     });
 }
+
 //all-menu-btn
 function openmenu() {
     $('#btnAllmenu').click(function () {
@@ -67,6 +64,7 @@ function closemenu() {
         menu.style.top = "-100vh";
     })
 }
+
 //btnInfo
 function btnSns() {
     $('#btnSns').click(function () {

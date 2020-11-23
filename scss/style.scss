@@ -512,11 +512,6 @@ body {
                             text-align: center;
                             border: 2px solid #fff;
                             transition: all .3s ease-in;
-                            &:hover{
-                                background-color: $mainColor-3;
-                                color: $mainColor-1;
-                                border: 2px solid $mainColor-1;
-                            }
                         }
                     }
 
