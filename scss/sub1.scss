@@ -1,0 +1,434 @@
+@charset 'utf-8';
+@import "design";
+@import "reset";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+@import url("https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css");
+
+body {
+    font: 16px/1.4 'NanumBarunGothic', Malgun Gothic, "맑은 고딕", "dotum", "돋움", "AppleGothic", sans-serif;
+    font-weight: normal;
+}
+
+#header {
+    width: 100%;
+    height: 200px;
+    background-color: $mainColor-1;
+    color: #fff;
+
+    >.tnb-wrap {
+        width: 1200px;
+        height: 100px;
+        margin: 0 auto;
+
+        >.tnb {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            margin: 0 auto;
+            padding-top: 40px;
+
+            .logo {
+                padding-left: 40px;
+                width: auto;
+                font-size: 36px;
+                font-family: 'Nanum Myeongjo', sans-serif;
+
+                h1 {
+                    em {
+                        color: $mainColor-2;
+                    }
+                }
+            }
+
+            .info {
+                position: absolute;
+                top: 55px;
+                right: 120px;
+                width: 455px;
+                height: 40px;
+                >ul {
+                    overflow: hidden;
+                    clear: both;
+                    width: 100%;
+                    height: 100%;
+                    >li {
+                        position: relative;
+                        display: block;
+                        float: left;
+                        font-size: 18px;
+                        padding-right: 25px;
+                        width: auto;
+                        height: 100%;
+                        >a{
+                            font-family: 'Nanum Myeongjo', sans-serif;
+                            &:hover{
+                                color: $mainColor-2;
+                            }
+                        }
+                        &:last-child {
+                            padding-right: 0;
+                        }
+                    }
+                }
+            }
+            .all-menu-btn {
+                position: absolute;
+                top: 40px;
+                right: 40px;
+                >a {
+                    display: block;
+                    width: 50px;
+                    height: 50px;
+                    >img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .info-sub-wrap{
+        position: relative;
+        >div{
+            position: absolute;
+            background-color: $mainColor-3;
+            color: $mainColor-1;
+            text-align: center;
+            >ul{
+                border: 1px solid #ccc;
+                li{
+                    display: block;
+                    height: 45px;
+                    width: 100%;
+                    line-height: 45px;
+                    border-bottom: 1px solid #ccc;
+                    &:hover{
+                        background-color: $mainColor-2;
+                        color: #fff;
+                        font-weight: bold;
+                    }
+                    &:last-child{
+                        border: none;
+                    }
+                }
+            }
+        }
+        >.info-sub-sns{
+            display: none;
+            width: 110px;
+            top: -15px;
+            left: calc(50% + 98px);
+            z-index: 2;
+            font-size: 14px;
+        }
+        >.info-sub-lang{
+            display: none;
+            width: 110px;
+            top: -15px;
+            left: calc(50% + 370px);
+            z-index: 2;
+            font-size: 14px;
+        }
+    }
+    >.all-menu-info{
+        position: fixed;
+        top: -100vh;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: $mainColor-1;
+        color: rgba(255, 255, 255, 0.5);
+        transition: .5s;
+        z-index: 97;
+        &:hover, :focus{
+            top: 0;
+            .all-menu-info-wrap{
+                &::before, &::after{
+                    width: 100%;
+                    height: 100%;
+                    opacity: 1;
+                    z-index: 98;
+                }
+            }
+        }
+        >.all-menu-info-wrap{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 0%;
+                height: 0%;
+                top: 50px;
+                left: 50px;
+                border-top: 2px solid #fff;
+                border-left: 2px solid #fff;
+                opacity: 0;
+                transition: .5s;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                width: 0%;
+                height: 0%;
+                bottom: 50px;
+                right: 50px;
+                border-bottom: 2px solid #fff;
+                border-right: 2px solid #fff;
+                opacity: 0;
+                transition: .5s;
+            }
+            >.all-menu-lnfo-logo{
+                position: absolute;
+                font-size: 36px;
+                font-family: 'Nanum Myeongjo', sans-serif;
+                top: 95px;
+                left: 95px;
+                h1 {
+                    em {
+                        color: $mainColor-2;
+                    }
+                }
+            }
+            >.all-menu-btn-close{
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                top: 90px;
+                right: 100px;
+                >a{
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 99;
+                    >img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            >ul{
+                width: 1200px;
+                height: 100%;
+                position: relative;
+                padding: 60px;
+                text-align: center;
+                overflow: hidden;
+                clear: both;
+                margin: 0 auto;
+                >li{
+                    float: left;
+                    margin-top: 20vh;
+                    margin-right: 69px;
+                    transition: all .5s;
+                    &:last-child{
+                        margin-right: 0px;
+                    }
+                    &:hover{
+                        color: #fff;
+                    }
+                    >a{
+                        position: relative;
+                        z-index: 99;
+                        font-size: 28px;
+                    }
+                    >ul{
+                        padding-top: 20px;
+                        >li{
+                            padding-bottom: 10px;
+                            a{
+                                position: relative;
+                                z-index: 99;
+                                font-size: 20px;
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    width: 0%;
+                                    height: 1px;
+                                    background-color: #fff;
+                                    bottom: 0px;
+                                    left: 0;
+                                    transition: width 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+                                    -webkit-transition: width 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+                                }
+                                &:hover{
+                                    color: $mainColor-2;
+                                    &::after{
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+    >.gnb-wrap {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 100px;
+        margin: 0 auto;
+        background: linear-gradient($mainColor-1 100px, rgba(0, 0, 0, 0.9) 0px);
+        background: -webkit-linear-gradient($mainColor-1 100px, rgba(0, 0, 0, 0.9) 0px);
+        background: -moz-gradient($mainColor-1 100px, rgba(0, 0, 0, 0.9) 0px);
+        background: -o-gradient($mainColor-1 100px, rgba(0, 0, 0, 0.9) 0px);
+        box-shadow: 0 5px 3px 0 rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+
+        >.gnb {
+            width: 1200px;
+            margin: 0 auto;
+            padding-top: 35px;
+
+            >ul {
+                width: 100%;
+                overflow: hidden;
+                margin: 0 auto;
+
+                >li {
+                    float: left;
+                    width: 20%;
+                    font-size: 22px;
+                    text-align: center;
+
+                    >a {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 0%;
+                            height: 2px;
+                            background-color: #fff;
+                            bottom: -3px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            -webkit-transform: translateX(-50%);
+                            transition: width 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+                            -webkit-transition: width 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+                        }
+
+                        &:hover {
+                            color: $mainColor-2;
+
+                            &::after {
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    >ul {
+                        padding-top: 40px;
+                        width: 100%;
+                        height: 100%;
+                        color: #ccc;
+                        font-weight: bold;
+                        text-align: center;
+                        font-size: 18px;
+                        font-family: 'Nanum Myeongjo', sans-serif;
+
+                        >li {
+                            width: 100%;
+                            padding: 5px 0;
+
+                            >a {
+                                position: relative;
+
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    width: 0%;
+                                    height: 2px;
+                                    background-color: $mainColor-2;
+                                    bottom: -4px;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    -webkit-transform: translateX(-50%);
+                                    transition: width 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+                                    -webkit-transition: width 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+                                }
+                            }
+
+                            &:hover {
+                                >a {
+                                    &::after {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    width: 100%;
+    height: 200px;
+    background-color: $mainColor-1;
+    color: $mainColor-3;
+    >.footer-wrap{
+        width: 1200px;
+        height: 200px;
+        margin: 0 auto;
+        overflow: hidden;
+        clear: both;
+        >.footer-section1{
+            height: 80px;
+            line-height: 80px;
+            >ul{
+                overflow: hidden;
+                clear: both;
+                >li{
+                    float: left;
+                    position: relative;
+                    display: block;
+                    padding: 0 15px;
+                    &::after{
+                        content: '';
+                        width: 2px;
+                        height: 15px;
+                        background-color: $mainColor-3;
+                        position: absolute;
+                        top: 32px;
+                        right: -2px;
+                    }
+                    &:nth-child(3){
+                        &::after{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        >.footer-section2{
+            float: left;
+            height: 120px;
+            padding-left: 15px;
+        }
+        >.footer-logo{
+            float: right;
+            font-size: 36px;
+            font-family: 'Nanum Myeongjo', sans-serif;
+            font-weight: bold;
+            color: #fff;
+            margin-right: 15px;
+            >p{
+                >a{
+                    >em{
+                        color: $mainColor-2;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -85,6 +85,7 @@ function btnLang() {
         }
     })
 }
+
 //호출문
 $(function () {
     gnbFnc();
@@ -94,4 +95,13 @@ $(function () {
     closemenu();
     btnSns();
     btnLang();
+});
+
+$(document).ready(function () {
+    $('#container').fullpage({
+        slideNavigation: true,
+        navigation: true,
+        scrollOverflow: true
+    });
+    $.fn.fullpage.setAllowScrolling(true);
 });

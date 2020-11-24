@@ -14,11 +14,17 @@ body {
     height: 200px;
     background-color: $mainColor-1;
     color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 
     >.tnb-wrap {
+        position: relative;
         width: 1200px;
         height: 100px;
         margin: 0 auto;
+        z-index: 1;
 
         >.tnb {
             position: relative;
@@ -46,11 +52,13 @@ body {
                 right: 120px;
                 width: 455px;
                 height: 40px;
+
                 >ul {
                     overflow: hidden;
                     clear: both;
                     width: 100%;
                     height: 100%;
+
                     >li {
                         position: relative;
                         display: block;
@@ -59,26 +67,32 @@ body {
                         padding-right: 25px;
                         width: auto;
                         height: 100%;
-                        >a{
+
+                        >a {
                             font-family: 'Nanum Myeongjo', sans-serif;
-                            &:hover{
+
+                            &:hover {
                                 color: $mainColor-2;
                             }
                         }
+
                         &:last-child {
                             padding-right: 0;
                         }
                     }
                 }
             }
+
             .all-menu-btn {
                 position: absolute;
                 top: 40px;
                 right: 40px;
+
                 >a {
                     display: block;
                     width: 50px;
                     height: 50px;
+
                     >img {
                         width: 100%;
                         height: 100%;
@@ -87,33 +101,40 @@ body {
             }
         }
     }
-    .info-sub-wrap{
+
+    .info-sub-wrap {
         position: relative;
-        >div{
+
+        >div {
             position: absolute;
             background-color: $mainColor-3;
             color: $mainColor-1;
             text-align: center;
-            >ul{
+
+            >ul {
                 border: 1px solid #ccc;
-                li{
+
+                li {
                     display: block;
                     height: 45px;
                     width: 100%;
                     line-height: 45px;
                     border-bottom: 1px solid #ccc;
-                    &:hover{
+
+                    &:hover {
                         background-color: $mainColor-2;
                         color: #fff;
                         font-weight: bold;
                     }
-                    &:last-child{
+
+                    &:last-child {
                         border: none;
                     }
                 }
             }
         }
-        >.info-sub-sns{
+
+        >.info-sub-sns {
             display: none;
             width: 110px;
             top: -15px;
@@ -121,7 +142,8 @@ body {
             z-index: 2;
             font-size: 14px;
         }
-        >.info-sub-lang{
+
+        >.info-sub-lang {
             display: none;
             width: 110px;
             top: -15px;
@@ -130,7 +152,8 @@ body {
             font-size: 14px;
         }
     }
-    >.all-menu-info{
+
+    >.all-menu-info {
         position: fixed;
         top: -100vh;
         left: 0;
@@ -140,10 +163,15 @@ body {
         color: rgba(255, 255, 255, 0.5);
         transition: .5s;
         z-index: 97;
-        &:hover, :focus{
+
+        &:hover,
+        :focus {
             top: 0;
-            .all-menu-info-wrap{
-                &::before, &::after{
+
+            .all-menu-info-wrap {
+
+                &::before,
+                &::after {
                     width: 100%;
                     height: 100%;
                     opacity: 1;
@@ -151,11 +179,13 @@ body {
                 }
             }
         }
-        >.all-menu-info-wrap{
+
+        >.all-menu-info-wrap {
             position: relative;
             width: 100%;
             height: 100%;
-            &::before{
+
+            &::before {
                 content: '';
                 position: absolute;
                 width: 0%;
@@ -167,7 +197,8 @@ body {
                 opacity: 0;
                 transition: .5s;
             }
-            &::after{
+
+            &::after {
                 content: '';
                 position: absolute;
                 width: 0%;
@@ -179,37 +210,43 @@ body {
                 opacity: 0;
                 transition: .5s;
             }
-            >.all-menu-lnfo-logo{
+
+            >.all-menu-lnfo-logo {
                 position: absolute;
                 font-size: 36px;
                 font-family: 'Nanum Myeongjo', sans-serif;
                 top: 95px;
                 left: 95px;
+
                 h1 {
                     em {
                         color: $mainColor-2;
                     }
                 }
             }
-            >.all-menu-btn-close{
+
+            >.all-menu-btn-close {
                 position: absolute;
                 width: 40px;
                 height: 40px;
                 top: 90px;
                 right: 100px;
-                >a{
+
+                >a {
                     position: relative;
                     display: block;
                     width: 100%;
                     height: 100%;
                     z-index: 99;
-                    >img{
+
+                    >img {
                         width: 100%;
                         height: 100%;
                     }
                 }
             }
-            >ul{
+
+            >ul {
                 width: 1200px;
                 height: 100%;
                 position: relative;
@@ -218,30 +255,38 @@ body {
                 overflow: hidden;
                 clear: both;
                 margin: 0 auto;
-                >li{
+
+                >li {
                     float: left;
                     margin-top: 20vh;
                     margin-right: 69px;
                     transition: all .5s;
-                    &:last-child{
+
+                    &:last-child {
                         margin-right: 0px;
                     }
-                    &:hover{
+
+                    &:hover {
                         color: #fff;
                     }
-                    >a{
+
+                    >a {
                         position: relative;
                         z-index: 99;
                         font-size: 28px;
                     }
-                    >ul{
+
+                    >ul {
                         padding-top: 20px;
-                        >li{
+
+                        >li {
                             padding-bottom: 10px;
-                            a{
+
+                            a {
                                 position: relative;
                                 z-index: 99;
                                 font-size: 20px;
+
                                 &::after {
                                     content: '';
                                     position: absolute;
@@ -253,9 +298,11 @@ body {
                                     transition: width 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
                                     -webkit-transition: width 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
                                 }
-                                &:hover{
+
+                                &:hover {
                                     color: $mainColor-2;
-                                    &::after{
+
+                                    &::after {
                                         width: 100%;
                                     }
                                 }
@@ -267,6 +314,7 @@ body {
             }
         }
     }
+
     >.gnb-wrap {
         position: relative;
         z-index: 1;
@@ -374,44 +422,51 @@ body {
 #container {
     >.row1-wrap {
         width: 100%;
-        height: 100%;
+        height: 100vh;
         overflow: hidden;
+        position: relative;
 
-        .row1 {
-            .bg-slide {
-                >div {
-                    display: inline-block;
-                    position: relative;
-                    width: 100%;
-                    height: 100%;
+        >div {
+            .row1 {
+                position: absolute;
+                top: 200px;
+                left: 0;
 
-                    >.bg-slide-txt1 {
-                        position: absolute;
-                        top: 75px;
-                        left: 10px;
-                        margin-left: calc((100% - 1200px) / 2);
-                        color: $mainColor-3;
-                        font-family: 'Nanum Myeongjo', sans-serif;
-                        font-size: 32px;
+                .bg-slide {
+                    >div {
+                        display: inline-block;
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+
+                        >.bg-slide-txt1 {
+                            position: absolute;
+                            top: 75px;
+                            left: 10px;
+                            margin-left: calc((100% - 1200px) / 2);
+                            color: $mainColor-3;
+                            font-family: 'Nanum Myeongjo', sans-serif;
+                            font-size: 32px;
+                        }
+
+                        >.bg-slide-txt2 {
+                            position: absolute;
+                            bottom: 120px;
+                            right: 10px;
+                            margin-right: calc((100% - 1200px) / 2);
+                            color: $mainColor-3;
+                            font-family: 'Nanum Myeongjo', sans-serif;
+                            font-size: 32px;
+                        }
                     }
 
-                    >.bg-slide-txt2 {
-                        position: absolute;
-                        bottom: 120px;
-                        right: 10px;
-                        margin-right: calc((100% - 1200px) / 2);
-                        color: $mainColor-3;
-                        font-family: 'Nanum Myeongjo', sans-serif;
-                        font-size: 32px;
+                    .bg-slide-2 {
+                        display: none;
                     }
-                }
 
-                .bg-slide-2 {
-                    display: none;
-                }
-
-                .bg-slide-3 {
-                    display: none;
+                    .bg-slide-3 {
+                        display: none;
+                    }
                 }
             }
         }
@@ -419,102 +474,105 @@ body {
 
     >.row2-wrap {
         width: 100%;
-        height: 950px;
+        height: 100vw;
         overflow: hidden;
+        background-color: #fff;
 
-        >.row2 {
-            width: 1200px;
-            padding-top: 100px;
-            margin: 0 auto;
+        >div {
+            >.row2 {
+                width: 1200px;
+                margin: 0 auto;
 
-            >h2 {
-                margin-top: 80px;
-                margin-bottom: 30px;
-                text-align: center;
-                font-family: 'Nanum Myeongjo', sans-serif;
-                font-size: 50px;
-
-                >em {
-                    color: $mainColor-2;
-                }
-            }
-
-            >ul {
-                padding: 30px;
-
-                >li {
-                    display: block;
-                    width: 1000px;
-                    height: 180px;
-                    color: #fff;
-                    background-color: $mainColor-1;
-                    margin: 0 auto;
+                >h2 {
+                    margin-top: 80px;
                     margin-bottom: 30px;
-                    overflow: hidden;
-                    transition: all .3s ease-in;
-                    &:hover{
-                        background-color: $mainColor-2;
+                    text-align: center;
+                    font-family: 'Nanum Myeongjo', sans-serif;
+                    font-size: 50px;
+
+                    >em {
+                        color: $mainColor-2;
                     }
+                }
 
-                    >span:first-child {
-                        float: left;
+                >ul {
+                    padding: 30px;
+
+                    >li {
                         display: block;
-                        width: 180px;
-                        height: 120px;
-                        line-height: 120px;
-                        text-align: center;
-                        margin: 30px 0;
-                        border-right: 2px solid #ccc;
-                        font-size: 80px;
-                        font-family: 'Nanum Myeongjo', sans-serif;
-                        color: #ccc;
-                    }
+                        width: 1000px;
+                        height: 180px;
+                        color: #fff;
+                        background-color: $mainColor-1;
+                        margin: 0 auto;
+                        margin-bottom: 30px;
+                        overflow: hidden;
+                        transition: all .3s ease-in;
 
-                    >ul {
-                        float: left;
-                        display: block;
-                        width: 610px;
-                        padding: 30px;
-
-                        >span {
-                            font-size: 24px;
+                        &:hover {
+                            background-color: $mainColor-2;
                         }
 
-                        li {
-                            position: relative;
-                            font-size: 18px;
-                            text-indent: 23px;
+                        >span:first-child {
+                            float: left;
+                            display: block;
+                            width: 180px;
+                            height: 120px;
+                            line-height: 120px;
+                            text-align: center;
+                            margin: 30px 0;
+                            border-right: 2px solid #ccc;
+                            font-size: 80px;
+                            font-family: 'Nanum Myeongjo', sans-serif;
+                            color: #ccc;
+                        }
 
-                            &::before {
-                                content: '';
-                                position: absolute;
-                                top: 9px;
-                                left: 6px;
-                                width: 6px;
-                                height: 6px;
-                                background: url(../img/main/ico_m_ul2.png) no-repeat 0 0;
+                        >ul {
+                            float: left;
+                            display: block;
+                            width: 610px;
+                            padding: 30px;
+
+                            >span {
+                                font-size: 24px;
+                            }
+
+                            li {
+                                position: relative;
+                                font-size: 18px;
+                                text-indent: 23px;
+
+                                &::before {
+                                    content: '';
+                                    position: absolute;
+                                    top: 9px;
+                                    left: 6px;
+                                    width: 6px;
+                                    height: 6px;
+                                    background: url(../img/main/ico_m_ul2.png) no-repeat 0 0;
+                                }
                             }
                         }
-                    }
 
-                    >span:last-child {
-                        float: left;
-                        width: 210px;
-                        height: 180px;
-                        padding: 65px 0;
+                        >span:last-child {
+                            float: left;
+                            width: 210px;
+                            height: 180px;
+                            padding: 65px 0;
 
-                        >a {
-                            display: block;
-                            width: 150px;
-                            height: 50px;
-                            line-height: 50px;
-                            font-size: 20px;
-                            text-align: center;
-                            border: 2px solid #fff;
-                            transition: all .3s ease-in;
+                            >a {
+                                display: block;
+                                width: 150px;
+                                height: 50px;
+                                line-height: 50px;
+                                font-size: 20px;
+                                text-align: center;
+                                border: 2px solid #fff;
+                                transition: all .3s ease-in;
+                            }
                         }
-                    }
 
+                    }
                 }
             }
         }
@@ -522,317 +580,365 @@ body {
 
     >.row3-wrap {
         width: 100%;
-        height: 950px;
+        height: 100vw;
+        background-color: #fff;
 
-        >.row3 {
-            width: 1200px;
-            padding-top: 100px;
-            margin: 0 auto;
-            clear: both;
+        >div {
+            >.row3 {
+                width: 1200px;
+                margin: 0 auto;
+                clear: both;
 
-            >h2 {
-                margin-top: 80px;
-                margin-bottom: 30px;
-                text-align: center;
-                font-family: 'Nanum Myeongjo', sans-serif;
-                font-size: 50px;
+                >h2 {
+                    margin-top: 80px;
+                    margin-bottom: 30px;
+                    text-align: center;
+                    font-family: 'Nanum Myeongjo', sans-serif;
+                    font-size: 50px;
 
-                >em {
-                    color: $mainColor-2;
+                    >em {
+                        color: $mainColor-2;
+                    }
                 }
-            }
-            >.row3-calendar-wrap{
-                float: left;
-                width: 500px;
-                height: 660px;
-                margin-left: 70px;
-                margin-right: 20px;
-                font-family: 'NanumBarunGothic', Malgun Gothic, "맑은 고딕", "dotum", "돋움", "AppleGothic", sans-serif;
-                >.row3-calendar{
-                    width: 100%;
-                    height: 100%;
-                    >.ui-corner-all{
+
+                >.row3-calendar-wrap {
+                    float: left;
+                    width: 500px;
+                    height: 660px;
+                    margin-left: 70px;
+                    margin-right: 20px;
+                    font-family: 'NanumBarunGothic', Malgun Gothic, "맑은 고딕", "dotum", "돋움", "AppleGothic", sans-serif;
+
+                    >.row3-calendar {
                         width: 100%;
                         height: 100%;
-                        border-radius: none;
-                        padding: 0;
-                        border: none;
-                        background-color: $mainColor-3;
-                        >.ui-datepicker-header{
+
+                        >.ui-corner-all {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: none;
                             padding: 0;
                             border: none;
                             background-color: $mainColor-3;
-                            height: 150px;
-                            >.ui-datepicker-prev{
-                                position: absolute;
-                                width: 40px;
-                                height: 25px;
-                                top: 95px;
-                                left: 150px;
-                                >.ui-icon{
-                                    position: relative;
-                                    top: 0;
-                                    left: 0;
-                                    margin: 0;
-                                    width: 100%;
-                                    height: 100%;
-                                    background: url(../img/main/prev_month.png) no-repeat 0 0;
+
+                            >.ui-datepicker-header {
+                                padding: 0;
+                                border: none;
+                                background-color: $mainColor-3;
+                                height: 150px;
+
+                                >.ui-datepicker-prev {
+                                    position: absolute;
+                                    width: 40px;
+                                    height: 25px;
+                                    top: 95px;
+                                    left: 150px;
+
+                                    >.ui-icon {
+                                        position: relative;
+                                        top: 0;
+                                        left: 0;
+                                        margin: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        background: url(../img/main/prev_month.png) no-repeat 0 0;
+                                    }
+                                }
+
+                                >.ui-datepicker-next {
+                                    position: absolute;
+                                    width: 40px;
+                                    height: 25px;
+                                    top: 95px;
+                                    right: 150px;
+
+                                    >.ui-icon {
+                                        position: relative;
+                                        top: 0;
+                                        left: 0;
+                                        margin: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        background: url(../img/main/next_month.png) no-repeat 0 0;
+                                    }
+                                }
+
+                                >.ui-datepicker-title {
+                                    margin-top: 90px;
+                                    font-family: 'NanumBarunGothic', Malgun Gothic, "맑은 고딕", "dotum", "돋움", "AppleGothic", sans-serif;
+                                    font-size: 22px;
+                                    font-weight: normal;
+                                    height: 36px;
+                                    line-height: 36px;
+
+                                    >.ui-datepicker-month {
+                                        color: $mainColor-2;
+                                    }
                                 }
                             }
-                            >.ui-datepicker-next{
-                                position: absolute;
-                                width: 40px;
-                                height: 25px;
-                                top: 95px;
-                                right: 150px;
-                                >.ui-icon{
-                                    position: relative;
-                                    top: 0;
-                                    left: 0;
-                                    margin: 0;
-                                    width: 100%;
-                                    height: 100%;
-                                    background: url(../img/main/next_month.png) no-repeat 0 0;
-                                }
-                            }
-                            >.ui-datepicker-title{
-                                margin-top: 90px;
-                                font-family: 'NanumBarunGothic', Malgun Gothic, "맑은 고딕", "dotum", "돋움", "AppleGothic", sans-serif;
-                                font-size: 22px;
-                                font-weight: normal;
-                                height: 36px;
-                                line-height: 36px;
-                                >.ui-datepicker-month{
-                                    color: $mainColor-2;
+
+                            >.ui-datepicker-calendar {
+                                width: 500px;
+                                height: 510px;
+
+                                >tbody {
+                                    >tr {
+                                        >td {
+                                            padding: 0;
+
+                                            >a {
+                                                background-color: $mainColor-3;
+                                                border: none;
+                                                text-align: center;
+
+                                                &.ui-state-active,
+                                                &.ui-state-hover {
+                                                    color: $mainColor-2;
+                                                }
+                                            }
+
+                                            &:nth-of-type(2) {
+                                                >a {
+                                                    color: #f00;
+                                                }
+                                            }
+                                        }
+
+                                        >.ui-datepicker-today {
+                                            >a {
+                                                color: $mainColor-2 !important;
+                                                font-weight: bold !important;
+                                                position: relative !important;
+
+                                                &::before {
+                                                    content: '' !important;
+                                                    position: absolute !important;
+                                                    top: -5px !important;
+                                                    left: 17px !important;
+                                                    width: 40px !important;
+                                                    height: 40px !important;
+                                                    border-radius: 20px !important;
+                                                    background-color: rgba(0, 0, 0, 0.05) !important;
+                                                }
+                                            }
+                                        }
+
+                                        >.ui-datepicker-other-month {
+                                            span {
+                                                border: none;
+                                                background-color: $mainColor-3;
+                                                text-align: center;
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
-                        >.ui-datepicker-calendar{
-                            width: 500px;
-                            height: 510px;
-                            >tbody{
-                                >tr{
-                                    >td{
-                                        padding: 0;
-                                        >a{
-                                            background-color: $mainColor-3;
-                                            border: none;
-                                            text-align: center;
-                                            &.ui-state-active, &.ui-state-hover{
-                                                color: $mainColor-2;
-                                            }
-                                        }
-                                        &:nth-of-type(2){
-                                            >a{
-                                                color: #f00;
-                                            }
-                                        }
-                                    }
-                                    >.ui-datepicker-today{
-                                        >a{
-                                            color: $mainColor-2 !important;
-                                            font-weight: bold !important;
-                                            position: relative !important;
-                                            &::before{
-                                                content: '' !important;
-                                                position: absolute !important;
-                                                top: -5px !important;
-                                                left: 17px !important;
-                                                width: 40px !important;
-                                                height: 40px !important;
-                                                border-radius: 20px !important;
-                                                background-color: rgba(0, 0, 0, 0.05) !important;
-                                            }
-                                        }
-                                    }
-                                    >.ui-datepicker-other-month{
-                                        span{
-                                            border: none;
-                                            background-color: $mainColor-3;
-                                            text-align: center;
-                                        }
-                                    }
-                                }
-                            }
+                    }
+                }
+
+                >.row3-textbox {
+                    float: left;
+                    width: 500px;
+                    height: 660px;
+                    background-color: $mainColor-3;
+
+                    >.row3-today {
+                        font-size: 24px;
+                        position: relative;
+                        padding-top: 52px;
+                        text-indent: 22px;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 20px;
+                            background-color: #aaa;
                         }
                     }
-                }
-            }
-            >.row3-textbox {
-                float: left;
-                width: 500px;
-                height: 660px;
-                background-color: $mainColor-3;
-                >.row3-today{
-                    font-size: 24px;
-                    position: relative;
-                    padding-top: 52px;
-                    text-indent: 22px;
-                    &::before{
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        left: 0;
+
+                    >.row3-txt1 {
+                        position: relative;
                         width: 100%;
-                        height: 20px;
-                        background-color: #aaa;
+                        height: 270px;
+
+                        >h4 {
+                            font-family: 'Nanum Myeongjo', sans-serif;
+                            color: $mainColor-2;
+                            font-size: 28px;
+                            padding-top: 45px;
+                            text-indent: 32px;
+                        }
+
+                        >ul {
+                            font-size: 18px;
+                            color: $mainColor-1;
+                            padding-top: 25px;
+                            text-indent: 50px;
+                            line-height: 2;
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 20px;
+                            background: linear-gradient(to right, #aaa 240px, $mainColor-2 240px, $mainColor-2 260px, #aaa 260px);
+                        }
                     }
-                }
-                >.row3-txt1{
-                    position: relative;
-                    width: 100%;
-                    height: 270px;
-                    >h4{
-                        font-family: 'Nanum Myeongjo', sans-serif;
-                        color: $mainColor-2;
-                        font-size: 28px;
-                        padding-top: 45px;
-                        text-indent: 32px;
-                    }
-                    >ul{
-                        font-size: 18px;
-                        color: $mainColor-1;
-                        padding-top: 25px;
-                        text-indent: 50px;
-                        line-height: 2;
-                    }
-                    &::after{
-                        content: '';
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
+
+                    >.row3-txt2 {
                         width: 100%;
-                        height: 20px;
-                        background: linear-gradient(to right, #aaa 240px, $mainColor-2 240px, $mainColor-2 260px, #aaa 260px) ;
-                    }
-                }
-                >.row3-txt2{
-                    width: 100%;
-                    height: 305px;
-                    >h4{
-                        font-family: 'Nanum Myeongjo', sans-serif;
-                        color: $mainColor-2;
-                        font-size: 28px;
-                        padding-top: 45px;
-                        text-indent: 32px;
-                    }
-                    >ul{
-                        font-size: 18px;
-                        color: $mainColor-1;
-                        padding-top: 25px;
-                        text-indent: 50px;
-                        line-height: 2;
+                        height: 305px;
+
+                        >h4 {
+                            font-family: 'Nanum Myeongjo', sans-serif;
+                            color: $mainColor-2;
+                            font-size: 28px;
+                            padding-top: 45px;
+                            text-indent: 32px;
+                        }
+
+                        >ul {
+                            font-size: 18px;
+                            color: $mainColor-1;
+                            padding-top: 25px;
+                            text-indent: 50px;
+                            line-height: 2;
+                        }
                     }
                 }
             }
         }
+
+
     }
 
     >.row4-wrap {
         width: 100%;
-        height: 950px;
+        height: 100vw;
+        background-color: #fff;
 
-        >.row4 {
-            width: 1200px;
-            padding-top: 100px;
-            margin: 0 auto;
-
-            >h2 {
-                margin-top: 80px;
-                margin-bottom: 30px;
-                text-align: center;
-                font-family: 'Nanum Myeongjo', sans-serif;
-                font-size: 50px;
-
-                >em {
-                    color: $mainColor-2;
-                }
-            }
-            >.row4-subslide-wrap{
+        >div {
+            >.row4 {
+                width: 1200px;
                 margin: 0 auto;
-                width: 960px;
-                height: 600px;
-                >.bx-wrapper{
-                    margin: 0;
-                    border: none;
-                    box-shadow: none;
-                    height: 600px;
-                    >.bx-viewport{
-                        height: 600px;
-                        >.row4-subslide{
-                            >.box-wrap{
-                                height: 600px;
-                                >.box{
-                                    background-color: $mainColor-3;
-                                    color: $mainColor-1;
-                                    height: 600px;
-                                    transition: 0.5s;
-                                    >h3{
-                                        width: 100%;
-                                        height: 370px;
-                                        font-size: 26px;
-                                        font-family: 'Nanum Myeongjo', sans-serif;
-                                        text-align: center;
-                                        padding-top: 150px;
-                                        word-break: keep-all;
-                                    }
-                                    >p{
-                                        width: 100%;
-                                        height: 150px;
-                                        word-break: keep-all;
-                                        padding: 0 10px;
-                                        line-height: 2.875;
-                                        @include els
-                                    }
-                                    >a{
-                                        display: none;
-                                        position: relative;
-                                        width: 120px;
-                                        height: 30px;
-                                        line-height: 30px;
-                                        text-align: left;
-                                        margin: 30px 100px 0;
-                                        text-indent: 30px;
-                                        &::before{
-                                            content: '';
-                                            position: absolute;
-                                            top: 0;
-                                            left: 0;
-                                            width: 30px;
-                                            height: 30px;
-                                            background: url(../img/main/btn_row4-2.png) no-repeat 50% 50%;
+
+                >h2 {
+                    margin-top: 80px;
+                    margin-bottom: 30px;
+                    text-align: center;
+                    font-family: 'Nanum Myeongjo', sans-serif;
+                    font-size: 50px;
+
+                    >em {
+                        color: $mainColor-2;
+                    }
+                }
+
+                >.row4-subslide-wrap {
+                    margin: 0 auto;
+                    width: 960px;
+                    height: 600px !important;
+
+                    >.bx-wrapper {
+                        margin: 0;
+                        border: none;
+                        box-shadow: none;
+                        height: 600px !important;
+
+                        >.bx-viewport {
+                            height: 600px !important;
+
+                            >.row4-subslide {
+                                >.box-wrap {
+                                    height: 600px !important;
+
+                                    >.box {
+                                        background-color: $mainColor-3;
+                                        color: $mainColor-1;
+                                        height: 600px;
+                                        transition: 0.5s;
+
+                                        >h3 {
+                                            width: 100%;
+                                            height: 370px;
+                                            font-size: 26px;
+                                            font-family: 'Nanum Myeongjo', sans-serif;
+                                            text-align: center;
+                                            padding-top: 150px;
+                                            word-break: keep-all;
                                         }
-                                    }
-                                    &:hover{
-                                        background-color: $mainColor-2;
-                                        color: #fff;
-                                        >a{
-                                            display: block;
+
+                                        >p {
+                                            width: 100%;
+                                            height: 150px;
+                                            word-break: keep-all;
+                                            padding: 0 10px;
+                                            line-height: 2.875;
+                                            @include els
+                                        }
+
+                                        >a {
+                                            display: none;
+                                            position: relative;
+                                            width: 120px;
+                                            height: 30px;
+                                            line-height: 30px;
+                                            text-align: left;
+                                            margin: 30px 100px 0;
+                                            text-indent: 30px;
+
+                                            &::before {
+                                                content: '';
+                                                position: absolute;
+                                                top: 0;
+                                                left: 0;
+                                                width: 30px;
+                                                height: 30px;
+                                                background: url(../img/main/btn_row4-2.png) no-repeat 50% 50%;
+                                            }
+                                        }
+
+                                        &:hover {
+                                            background-color: $mainColor-2;
+                                            color: #fff;
+
+                                            >a {
+                                                display: block;
+                                            }
                                         }
                                     }
                                 }
                             }
                         }
-                    }
-                    >.bx-controls{
-                        >.bx-controls-direction{
-                            >.bx-prev{
-                                position: absolute;
-                                top: 50%;
-                                left: -89px;
-                                width: 79px;
-                                height: 29px;
-                                background: url(../img/main/prev_exhibit.png) no-repeat 0 0;
-                                z-index: 1;
-                            }
-                            >.bx-next{
-                                position: absolute;
-                                top: 50%;
-                                right: -89px;
-                                width: 79px;
-                                height: 29px;
-                                background: url(../img/main/next_exhibit.png) no-repeat 0 0;
-                                z-index: 1;
+
+                        >.bx-controls {
+                            >.bx-controls-direction {
+                                >.bx-prev {
+                                    position: absolute;
+                                    top: 50%;
+                                    left: -89px;
+                                    width: 79px;
+                                    height: 29px;
+                                    background: url(../img/main/prev_exhibit.png) no-repeat 0 0;
+                                    z-index: 1;
+                                }
+
+                                >.bx-next {
+                                    position: absolute;
+                                    top: 50%;
+                                    right: -89px;
+                                    width: 79px;
+                                    height: 29px;
+                                    background: url(../img/main/next_exhibit.png) no-repeat 0 0;
+                                    z-index: 1;
+                                }
                             }
                         }
                     }
@@ -843,179 +949,284 @@ body {
 
     >.row5-wrap {
         width: 100%;
-        height: 950px;
-        .row5{
-            width: 1200px;
-            padding-top: 100px;
-            margin: 0 auto;
-            clear: both;
-            >h2 {
-                margin-top: 80px;
-                margin-bottom: 30px;
-                text-align: center;
-                font-family: 'Nanum Myeongjo', sans-serif;
-                font-size: 50px;
+        height: 100vw;
+        background-color: #fff;
 
-                >em {
-                    color: $mainColor-2;
-                }
-            }
-            .row5-box-wrap{
-                width: 1000px;
-                height: 500px;
+        >div {
+            .row5 {
+                width: 1200px;
                 margin: 0 auto;
-                >div{
-                    float: left;
-                    width: 300px;
-                    height: 500px;
-                    color: #fff;
-                    margin-right: 50px;
-                    word-break: keep-all;
-                    transition: .5s;
-                    text-align: center;
-                    overflow: hidden;
-                    position: relative;
-                    &::before{
-                        content: '';
-                        position: absolute;
-                        width: 0%;
-                        height: 0%;
-                        top: 30px;
-                        left: 30px;
-                        border-top: 2px solid #fff;
-                        border-left: 2px solid #fff;
-                        opacity: 0;
-                        transition: .5s;
-                    }
-                    &::after{
-                        content: '';
-                        position: absolute;
-                        width: 0%;
-                        height: 0%;
-                        bottom: 30px;
-                        right: 30px;
-                        border-bottom: 2px solid #fff;
-                        border-right: 2px solid #fff;
-                        opacity: 0;
-                        transition: .5s;
-                    }
-                    >p{
-                        font-size: 26px;
-                        margin-top: 110px;
-                        height: 120px;
-                        text-align: center;
-                        font-family: 'Nanum Myeongjo', sans-serif;
-                    }
-                    >a{
-                        position: relative;
-                        display: block;
-                        font-size: 16px;
-                        margin-top: 200px;
-                        z-index: 1;
-                    }
-                    &:hover, &:focus{
-                        transform: scale(1.1);
-                        -webkit-transform: scale(1.1);
-                        &::before{
-                            width: 100%;
-                            height: 100%;
-                            opacity: 1;
-                        }
-                        &::after{
-                            width: 100%;
-                            height: 100%;
-                            opacity: 1;
-                        }
-                    }
-                    &:nth-child(1){
-                        >p{
-                            padding: 25px 10px;
-                        }
-                    }
-                    &:nth-child(2){
-                        >p{
-                            padding: 42px 10px;
-                        }
-                    }
-                    &:nth-child(3){
-                        >p{
-                            padding: 6px 10px;
-                        }
-                    }
-                }
-                >.row5-box1{
-                    background: url(../img/main/row5-subslide-1.png) no-repeat 0 0;
-                }
-                >.row5-box2{
-                    background: url(../img/main/row5-subslide-2.png) no-repeat 0 0;
-                }
-                >.row5-box3{
-                    background: url(../img/main/row5-subslide-3.png) no-repeat 0 0;
-                    margin-right: 0;
-                }
-            }
-        }
-    }
-}
-
-#footer {
-    width: 100%;
-    height: 200px;
-    background-color: $mainColor-1;
-    color: $mainColor-3;
-    >.footer-wrap{
-        width: 1200px;
-        height: 200px;
-        margin: 0 auto;
-        overflow: hidden;
-        clear: both;
-        >.footer-section1{
-            height: 80px;
-            line-height: 80px;
-            >ul{
-                overflow: hidden;
                 clear: both;
-                >li{
-                    float: left;
-                    position: relative;
-                    display: block;
-                    padding: 0 15px;
-                    &::after{
-                        content: '';
-                        width: 2px;
-                        height: 15px;
-                        background-color: $mainColor-3;
-                        position: absolute;
-                        top: 32px;
-                        right: -2px;
-                    }
-                    &:nth-child(3){
-                        &::after{
-                            display: none;
-                        }
-                    }
-                }
-            }
-        }
-        >.footer-section2{
-            float: left;
-            height: 120px;
-            padding-left: 15px;
-        }
-        >.footer-logo{
-            float: right;
-            font-size: 36px;
-            font-family: 'Nanum Myeongjo', sans-serif;
-            font-weight: bold;
-            color: #fff;
-            margin-right: 15px;
-            >p{
-                >a{
-                    >em{
+
+                >h2 {
+                    margin-top: 80px;
+                    margin-bottom: 30px;
+                    text-align: center;
+                    font-family: 'Nanum Myeongjo', sans-serif;
+                    font-size: 50px;
+
+                    >em {
                         color: $mainColor-2;
                     }
                 }
+
+                .row5-box-wrap {
+                    width: 1000px;
+                    height: 500px;
+                    margin: 0 auto;
+
+                    >div {
+                        float: left;
+                        width: 300px;
+                        height: 500px;
+                        color: #fff;
+                        margin-right: 50px;
+                        word-break: keep-all;
+                        transition: .5s;
+                        text-align: center;
+                        overflow: hidden;
+                        position: relative;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            width: 0%;
+                            height: 0%;
+                            top: 30px;
+                            left: 30px;
+                            border-top: 2px solid #fff;
+                            border-left: 2px solid #fff;
+                            opacity: 0;
+                            transition: .5s;
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 0%;
+                            height: 0%;
+                            bottom: 30px;
+                            right: 30px;
+                            border-bottom: 2px solid #fff;
+                            border-right: 2px solid #fff;
+                            opacity: 0;
+                            transition: .5s;
+                        }
+
+                        >p {
+                            font-size: 26px;
+                            margin-top: 110px;
+                            height: 120px;
+                            text-align: center;
+                            font-family: 'Nanum Myeongjo', sans-serif;
+                        }
+
+                        >a {
+                            position: relative;
+                            display: block;
+                            font-size: 16px;
+                            margin-top: 200px;
+                            z-index: 1;
+                        }
+
+                        &:hover,
+                        &:focus {
+                            transform: scale(1.1);
+                            -webkit-transform: scale(1.1);
+
+                            &::before {
+                                width: 100%;
+                                height: 100%;
+                                opacity: 1;
+                            }
+
+                            &::after {
+                                width: 100%;
+                                height: 100%;
+                                opacity: 1;
+                            }
+                        }
+
+                        &:nth-child(1) {
+                            >p {
+                                padding: 25px 10px;
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            >p {
+                                padding: 42px 10px;
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            >p {
+                                padding: 6px 10px;
+                            }
+                        }
+                    }
+
+                    >.row5-box1 {
+                        background: url(../img/main/row5-subslide-1.png) no-repeat 0 0;
+                    }
+
+                    >.row5-box2 {
+                        background: url(../img/main/row5-subslide-2.png) no-repeat 0 0;
+                    }
+
+                    >.row5-box3 {
+                        background: url(../img/main/row5-subslide-3.png) no-repeat 0 0;
+                        margin-right: 0;
+                    }
+                }
             }
         }
     }
+
+    >.row6-wrap {
+        width: 100%;
+        height: auto !important;
+        background-color: $mainColor-1;
+        color: $mainColor-3;
+
+        >.fp-tableCell {
+            padding: 0 !important;
+            width: 100%;
+            height: auto !important;
+            >.footer-wrap {
+                width: 1200px;
+                margin: 0 auto;
+                overflow: hidden;
+                clear: both;
+
+                >.footer-section1 {
+                    height: 80px;
+                    line-height: 80px;
+
+                    >ul {
+                        overflow: hidden;
+                        clear: both;
+
+                        >li {
+                            float: left;
+                            position: relative;
+                            display: block;
+                            padding: 0 15px;
+
+                            &::after {
+                                content: '';
+                                width: 2px;
+                                height: 15px;
+                                background-color: $mainColor-3;
+                                position: absolute;
+                                top: 32px;
+                                right: -2px;
+                            }
+
+                            &:nth-child(3) {
+                                &::after {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                >.footer-section2 {
+                    float: left;
+                    height: 120px;
+                    padding-left: 15px;
+                }
+
+                >.footer-logo {
+                    float: right;
+                    font-size: 36px;
+                    font-family: 'Nanum Myeongjo', sans-serif;
+                    font-weight: bold;
+                    color: #fff;
+                    margin-right: 15px;
+
+                    >p {
+                        >a {
+                            >em {
+                                color: $mainColor-2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
 }
+
+// #footer {
+//     width: 100%;
+//     height: 200px;
+//     background-color: $mainColor-1;
+//     color: $mainColor-3;
+
+//     >.footer-wrap {
+//         width: 1200px;
+//         height: 200px;
+//         margin: 0 auto;
+//         overflow: hidden;
+//         clear: both;
+
+//         >.footer-section1 {
+//             height: 80px;
+//             line-height: 80px;
+
+//             >ul {
+//                 overflow: hidden;
+//                 clear: both;
+
+//                 >li {
+//                     float: left;
+//                     position: relative;
+//                     display: block;
+//                     padding: 0 15px;
+
+//                     &::after {
+//                         content: '';
+//                         width: 2px;
+//                         height: 15px;
+//                         background-color: $mainColor-3;
+//                         position: absolute;
+//                         top: 32px;
+//                         right: -2px;
+//                     }
+
+//                     &:nth-child(3) {
+//                         &::after {
+//                             display: none;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+
+//         >.footer-section2 {
+//             float: left;
+//             height: 120px;
+//             padding-left: 15px;
+//         }
+
+//         >.footer-logo {
+//             float: right;
+//             font-size: 36px;
+//             font-family: 'Nanum Myeongjo', sans-serif;
+//             font-weight: bold;
+//             color: #fff;
+//             margin-right: 15px;
+
+//             >p {
+//                 >a {
+//                     >em {
+//                         color: $mainColor-2;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
