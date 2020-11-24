@@ -320,10 +320,10 @@ body {
         width: 100%;
         height: 100px;
         margin: 0 auto;
-        background: linear-gradient($mainColor-1 100px, rgba(0, 0, 0, 0.9) 0px);
-        background: -webkit-linear-gradient($mainColor-1 100px, rgba(0, 0, 0, 0.9) 0px);
-        background: -moz-gradient($mainColor-1 100px, rgba(0, 0, 0, 0.9) 0px);
-        background: -o-gradient($mainColor-1 100px, rgba(0, 0, 0, 0.9) 0px);
+        background: linear-gradient($mainColor-1 100px, #fff 0px);
+        background: -webkit-linear-gradient($mainColor-1 100px, #fff 0px);
+        background: -moz-gradient($mainColor-1 100px, #fff 0px);
+        background: -o-gradient($mainColor-1 100px, #fff 0px);
         box-shadow: 0 5px 3px 0 rgba(0, 0, 0, 0.5);
         overflow: hidden;
 
@@ -375,11 +375,9 @@ body {
                         padding-top: 40px;
                         width: 100%;
                         height: 100%;
-                        color: #ccc;
-                        font-weight: bold;
+                        color: $mainColor-1;
                         text-align: center;
                         font-size: 18px;
-                        font-family: 'Nanum Myeongjo', sans-serif;
 
                         >li {
                             width: 100%;
@@ -405,6 +403,7 @@ body {
 
                             &:hover {
                                 >a {
+                                    font-weight: bold;
                                     &::after {
                                         width: 100%;
                                     }
@@ -1139,74 +1138,3 @@ body {
 
     }
 }
-
-// #footer {
-//     width: 100%;
-//     height: 200px;
-//     background-color: $mainColor-1;
-//     color: $mainColor-3;
-
-//     >.footer-wrap {
-//         width: 1200px;
-//         height: 200px;
-//         margin: 0 auto;
-//         overflow: hidden;
-//         clear: both;
-
-//         >.footer-section1 {
-//             height: 80px;
-//             line-height: 80px;
-
-//             >ul {
-//                 overflow: hidden;
-//                 clear: both;
-
-//                 >li {
-//                     float: left;
-//                     position: relative;
-//                     display: block;
-//                     padding: 0 15px;
-
-//                     &::after {
-//                         content: '';
-//                         width: 2px;
-//                         height: 15px;
-//                         background-color: $mainColor-3;
-//                         position: absolute;
-//                         top: 32px;
-//                         right: -2px;
-//                     }
-
-//                     &:nth-child(3) {
-//                         &::after {
-//                             display: none;
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-
-//         >.footer-section2 {
-//             float: left;
-//             height: 120px;
-//             padding-left: 15px;
-//         }
-
-//         >.footer-logo {
-//             float: right;
-//             font-size: 36px;
-//             font-family: 'Nanum Myeongjo', sans-serif;
-//             font-weight: bold;
-//             color: #fff;
-//             margin-right: 15px;
-
-//             >p {
-//                 >a {
-//                     >em {
-//                         color: $mainColor-2;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
