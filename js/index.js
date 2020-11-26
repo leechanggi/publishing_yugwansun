@@ -33,7 +33,6 @@ function subslideFnc() {
         controls: true
     });
 }
-
 $(function () {
     calendarFnc();
     subslideFnc();

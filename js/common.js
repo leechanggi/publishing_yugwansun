@@ -50,6 +50,22 @@ function btnLang() {
     })
 }
 
+//stickyGnb
+function stickyGnbFnc() {
+    $(function () {
+        var wind = $(window),
+            header = $('.row1-smlMenu-wrap'),
+            headerOffsettop = header.offset().top;
+        wind.scroll(function () {
+            if ($(this).scrollTop() >= headerOffsettop) {
+                header.addClass('sticky');
+            } else {
+                header.removeClass('sticky');
+            }
+        });
+    });
+}
+
 //호출문
 $(function () {
     gnbFnc();
@@ -57,4 +73,5 @@ $(function () {
     closemenu();
     btnSns();
     btnLang();
+    stickyGnbFnc();
 });
