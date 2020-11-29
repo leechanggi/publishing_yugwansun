@@ -427,15 +427,105 @@ body {
 #container {
     >.row1-wrap {
         width: 100%;
-        height: 950px;
+        height: 750px;
         overflow: hidden;
         position: relative;
-
+        bottom: 0;
+        left: 0;
         .row1 {
-            position: absolute;
-            top: 200px;
-            left: 0;
-
+            .bx-wrapper{
+                position: relative;
+                box-shadow: none;
+                border: none;
+                background-color: none;
+                margin-bottom: 0;
+                height: auto;
+                .bx-has-pager{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    .bx-pager{
+                        position: absolute;
+                        padding: 0;
+                        width: 160px;
+                        height: 178px;
+                        left: 0px;
+                        bottom: 0;
+                        z-index: 1;
+                        margin: 14.89583333333333vw 0;
+                        .bx-pager-item{
+                            position: relative;
+                            display: block;
+                            width: 160px;
+                            height: 3px;
+                            &:nth-of-type(1){
+                                >a{
+                                    &::after{
+                                        width: 241px;
+                                        right: -251px;
+                                        background: url(../img/main/txt-1.png);
+                                    }
+                                }
+                            }
+                            &:nth-of-type(2){
+                                >a{
+                                    &::after{
+                                        width: 167px;
+                                        right: -177px;
+                                        background: url(../img/main/txt-2.png);
+                                    }
+                                }
+                            }
+                            &:nth-of-type(3){
+                                >a{
+                                    &::after{
+                                        width: 187px;
+                                        right: -197px;
+                                        background: url(../img/main/txt-3.png);
+                                    }
+                                }
+                            }
+                            >a{
+                                position: relative;
+                                display: block;
+                                width: 60px;
+                                height: 3px;
+                                border-radius: 0;
+                                background-color: $backgroundColor-1;
+                                margin: 40px 0 40px 0;
+                                overflow: visible;
+                                &::before{
+                                    position: absolute;
+                                    content: '';
+                                    width: 0px;
+                                    height: 3px;
+                                    background-color: $mainColor-5;
+                                    top: 0;
+                                    left: 0;
+                                    transition: all 3s ease-in;
+                                }
+                                &::after{
+                                    position: absolute;
+                                    content: '';
+                                    width: 100px;
+                                    height: 15px;
+                                    top: 50%;
+                                    right: 0;
+                                    transform: translateY(-50%);
+                                }
+                                
+                                &.active{
+                                    &::before{
+                                        width: 60px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             .bg-slide {
                 >div {
                     display: inline-block;
@@ -445,7 +535,7 @@ body {
 
                     .bg-slide-txt1 {
                         position: absolute;
-                        top: 75px;
+                        top: 275px;
                         left: 10px;
                         margin-left: calc((100% - 1200px) / 2);
                         color: $mainColor-3;
@@ -463,14 +553,6 @@ body {
                         font-size: 32px;
                     }
                 }
-
-                .bg-slide-2 {
-                    display: none;
-                }
-
-                .bg-slide-3 {
-                    display: none;
-                }
             }
         }
     }
@@ -486,7 +568,8 @@ body {
             margin: 0 auto;
 
             >h2 {
-                margin-top: 230px;
+                margin-top: 200px;
+                margin-bottom: 30px;
                 text-align: center;
                 font-family: '국립박물관문화재단클래식M', sans-serif;
                 font-size: 50px;
@@ -589,7 +672,8 @@ body {
             clear: both;
 
             >h2 {
-                margin-top: 230px;
+                margin-top: 200px;
+                margin-bottom: 30px;
                 text-align: center;
                 font-family: '국립박물관문화재단클래식M', sans-serif;
                 font-size: 50px;
@@ -824,7 +908,7 @@ body {
             margin: 0 auto;
 
             >h2 {
-                margin-top: 80px;
+                margin-top: 200px;
                 margin-bottom: 30px;
                 text-align: center;
                 font-family: '국립박물관문화재단클래식M', sans-serif;
@@ -951,7 +1035,7 @@ body {
             clear: both;
 
             >h2 {
-                margin-top: 80px;
+                margin-top: 200px;
                 margin-bottom: 30px;
                 text-align: center;
                 font-family: '국립박물관문화재단클래식M', sans-serif;

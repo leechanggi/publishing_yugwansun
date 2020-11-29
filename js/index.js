@@ -1,3 +1,19 @@
+//row1-mainslide(bxSlider)
+function mainSlideFnc() {
+    $('.bg-slide').bxSlider({
+        mode: 'horizontal',
+        speed : 1000,
+        pager : true,
+        moveSlides: 1,
+        responsive : true,
+        auto: true,
+        useCSS: true,
+        shrinkItems: true,
+        pager: true,
+        controls: false,
+        autoHover : true
+    });
+}
 //row3-calendar(datepicker)
 var calendar;
 
@@ -19,7 +35,7 @@ function calendarFnc() {
 }
 
 //row4-subslide(bxSlider)
-function subslideFnc() {
+function subSlideFnc() {
     $('.row4-subslide').bxSlider({
         slideWidth: 320,
         moveSlides: 1,
@@ -34,6 +50,7 @@ function subslideFnc() {
     });
 }
 $(function () {
+    mainSlideFnc();
     calendarFnc();
-    subslideFnc();
+    subSlideFnc();
 });
