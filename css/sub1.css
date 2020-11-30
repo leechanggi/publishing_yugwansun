@@ -22,6 +22,27 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: '국립박물관문화재단클래식B';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식B.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: '국립박물관문화재단클래식M';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식M.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: '국립박물관문화재단클래식L';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식L.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font: 16px/1.4 'NanumBarunGothic', Malgun Gothic, "맑은 고딕", "dotum", "돋움", "AppleGothic", sans-serif;
   font-weight: normal;
@@ -92,6 +113,20 @@ i {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  display: none;
 }
 
 .skip-menu a {
@@ -879,6 +914,61 @@ body {
   padding: 100px 0 40px;
 }
 
+#container .row2-wrap .row2 .sub-search-wrap {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  vertical-align: top;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#container .row2-wrap .row2 .sub-search-wrap:hover, #container .row2-wrap .row2 .sub-search-wrap:focus, #container .row2-wrap .row2 .sub-search-wrap.on {
+  width: 240px;
+}
+
+#container .row2-wrap .row2 .sub-search-wrap:hover .search input[type=submit], #container .row2-wrap .row2 .sub-search-wrap:focus .search input[type=submit], #container .row2-wrap .row2 .sub-search-wrap.on .search input[type=submit] {
+  background: url(../img/sub2/sub-search-1.png) no-repeat 50% 50%;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  top: 5px;
+  right: 5px;
+}
+
+#container .row2-wrap .row2 .sub-search-wrap .search label input[type=search] {
+  min-width: 240px;
+  height: 40px;
+  border-radius: 20px;
+  padding-left: 20px;
+  background-color: #ccc;
+  outline: none;
+  border: none;
+}
+
+#container .row2-wrap .row2 .sub-search-wrap .search input[type=submit] {
+  position: absolute;
+  display: inline-block;
+  top: 0px;
+  right: 0px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: url(../img/sub2/sub-search.png) no-repeat 50% 50%;
+  text-indent: -9999px;
+  background-size: cover;
+  cursor: pointer;
+}
+
 #container .row2-wrap .row2 > ul {
   border-top: 2px solid #1C356F;
 }
@@ -974,81 +1064,6 @@ body {
   width: 14px;
   height: 14px;
   background: url(../img/sub1/icon_more.png) no-repeat 0 0;
-}
-
-#container .row2-wrap .row2 > .search-wrap {
-  clear: both;
-  overflow: hidden;
-  width: 400px;
-  height: 40px;
-  vertical-align: top;
-  margin: 10px 0 0 10px;
-}
-
-#container .row2-wrap .row2 > .search-wrap > select {
-  display: block;
-  float: left;
-  width: 70px;
-  height: 40px;
-  border: 1px solid #ddd;
-  color: #444;
-  margin-right: 2px;
-  text-indent: 10px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: url(../img/sub1/down-arrow.png) no-repeat 80% 50%;
-  background-color: #fff;
-}
-
-#container .row2-wrap .row2 > .search-wrap select::-ms-expand {
-  display: none;
-}
-
-#container .row2-wrap .row2 > .search-wrap > form {
-  display: block;
-  float: left;
-  width: 280px;
-  height: 40px;
-}
-
-#container .row2-wrap .row2 > .search-wrap > form > fieldset {
-  width: 270px;
-  height: 40px;
-}
-
-#container .row2-wrap .row2 > .search-wrap > form > fieldset > label {
-  width: 200px;
-  height: 40px;
-  line-height: 40px;
-}
-
-#container .row2-wrap .row2 > .search-wrap > form > fieldset > label > input {
-  position: relative;
-  top: -2px;
-  width: 200px;
-  height: 40px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-#container .row2-wrap .row2 > .search-wrap > form > fieldset > input {
-  position: relative;
-  top: -2px;
-  width: 60px;
-  height: 40px;
-  line-height: 40px;
-  background-color: #222222;
-  border: none;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 
 #container .row2-wrap .row2 > .pager-list-wrap {

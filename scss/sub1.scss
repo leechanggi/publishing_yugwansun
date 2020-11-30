@@ -494,7 +494,8 @@ body {
                 height: 65px;
                 background-color: $mainColor-1;
                 position: relative;
-                &.sticky{
+
+                &.sticky {
                     position: fixed;
                     top: 0;
                     z-index: 1;
@@ -790,6 +791,68 @@ body {
                 padding: 100px 0 40px;
             }
 
+            .sub-search-wrap {
+                position: relative;
+                margin: 0 auto;
+                margin-bottom: 40px;
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                vertical-align: top;
+                transition: all 0.4s;
+                border-radius: 20px;
+                overflow: hidden;
+
+                &:hover,
+                &:focus,
+                &.on {
+                    width: 240px;
+
+                    .search {
+                        input[type=submit] {
+                            background: url(../img/sub2/sub-search-1.png) no-repeat 50% 50%;
+                            background-size: cover;
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 15px;
+                            top: 5px;
+                            right: 5px;
+                        }
+                    }
+                }
+
+                .search {
+                    label {
+                        input[type=search] {
+                            min-width: 240px;
+                            height: 40px;
+                            border-radius: 20px;
+                            padding-left: 20px;
+                            background-color: #ccc;
+                            outline: none;
+                            border: none;
+                        }
+                    }
+
+                    input[type=submit] {
+                        position: absolute;
+                        display: inline-block;
+                        top: 0px;
+                        right: 0px;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 20px;
+                        margin: 0;
+                        padding: 0;
+                        border: none;
+                        background: url(../img/sub2/sub-search.png) no-repeat 50% 50%;
+                        text-indent: -9999px;
+                        background-size: cover;
+                        cursor: pointer;
+                    }
+                }
+            }
+
             >ul {
                 border-top: 2px solid $mainColor-1;
 
@@ -885,80 +948,6 @@ body {
                 }
             }
 
-            >.search-wrap {
-                clear: both;
-                overflow: hidden;
-                width: 400px;
-                height: 40px;
-                vertical-align: top;
-                margin: 10px 0 0 10px;
-
-                >select {
-                    display: block;
-                    float: left;
-                    width: 70px;
-                    height: 40px;
-                    border: 1px solid #ddd;
-                    color: #444;
-                    margin-right: 2px;
-                    text-indent: 10px;
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    appearance: none;
-                    background: url(../img/sub1/down-arrow.png) no-repeat 80% 50%;
-                    background-color: #fff;
-                }
-
-                select::-ms-expand {
-                    display: none;
-                }
-
-                >form {
-                    display: block;
-                    float: left;
-                    width: 280px;
-                    height: 40px;
-
-                    >fieldset {
-                        width: 270px;
-                        height: 40px;
-
-                        >label {
-                            width: 200px;
-                            height: 40px;
-                            line-height: 40px;
-
-                            >input {
-                                position: relative;
-                                top: -2px;
-                                width: 200px;
-                                height: 40px;
-                                background-color: #fff;
-                                border: 1px solid #ddd;
-                                -webkit-appearance: none;
-                                -moz-appearance: none;
-                                appearance: none;
-                            }
-                        }
-
-                        >input {
-                            position: relative;
-                            top: -2px;
-                            width: 60px;
-                            height: 40px;
-                            line-height: 40px;
-                            background-color: #222222;
-                            border: none;
-                            color: #fff;
-                            font-size: 16px;
-                            font-weight: bold;
-                            -webkit-appearance: none;
-                            -moz-appearance: none;
-                            appearance: none;
-                        }
-                    }
-                }
-            }
 
             >.pager-list-wrap {
                 width: 1200px;
@@ -1123,9 +1112,11 @@ body {
         height: 120px;
         margin: 0 calc((100vw - 1200px) / 2);
         clear: both;
-        >.footer-txt{
+
+        >.footer-txt {
             float: left;
         }
+
         >.footer-logo {
             position: relative;
             float: right;
@@ -1134,7 +1125,7 @@ body {
             font-weight: bold;
             color: #fff;
             right: 30px;
-    
+
             >p {
                 >a {
                     >em {

@@ -2,7 +2,7 @@
 function mainSlideFnc() {
     $('.bg-slide').bxSlider({
         mode: 'horizontal',
-        speed: 1000,
+        speed: 500,
         pager: true,
         moveSlides: 1,
         responsive: true,
@@ -50,18 +50,8 @@ function subSlideFnc() {
     });
 }
 
-//tnb
-// function tnbFnc() {
-//     if ($('.row1-wrap').hasClass('active')) {
-//         $('header').style.top = "0px"
-//     } else {
-//         $('header').style.top = "-100px"
-//     }
-// }
-
 $(function () {
     mainSlideFnc();
     calendarFnc();
     subSlideFnc();
-    //tnbFnc();
 });
