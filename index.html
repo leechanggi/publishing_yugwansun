@@ -365,7 +365,16 @@
             anchors: ['row1', 'row2', 'row3', 'row4', 'row5', 'footer'],
             navigation: true,
             slidesNavigation: true,
-            scrollOverflow: true
+            scrollOverflow: true,
+            afterLoad: function (origin, destination, direction) {
+                console.log('destination===>', destination);
+                console.log('direction===>', direction);
+                if ($('.row1-wrap').hasClass('active')) {
+                    $('header').css('top', 0);
+                } else {
+                    $('header').css('top', '-100px');
+                }
+            }
         });
     </script>
 </body>

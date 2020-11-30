@@ -15,14 +15,10 @@ body {
     background-color: $mainColor-1;
     color: #fff;
     position: absolute;
-    top: 0;
+    top: -100px;
     left: 0;
     z-index: 1;
     transition: all 200ms;
-    &.active{
-        position: fixed;
-        top: -100px;
-    }
 
     >.tnb-wrap {
         position: relative;
@@ -432,6 +428,9 @@ body {
         position: relative;
         bottom: 0;
         left: 0;
+        .iScrollVerticalScrollbar{
+            display: none;
+        }
         .row1 {
             .bx-wrapper{
                 position: relative;
@@ -442,7 +441,7 @@ body {
                 height: auto;
                 .bx-has-pager{
                     position: absolute;
-                    width: 100%;
+                    width: 160px;
                     height: 100%;
                     top: 0;
                     left: 0;
@@ -1230,5 +1229,69 @@ body {
             }
         }
 
+    }
+}
+#fp-nav{
+    position: fixed;
+    top: calc(300px + 14.89583333333333vw) !important;
+    right: 0 !important;
+    z-index: 0 !important;
+    width: 60px !important;
+    >ul{
+        li{
+            margin: 40px 0 !important;
+            width: 60px !important;
+            height: 3px !important;
+            >a{
+                position: relative;
+                right: 0;
+                background-color: $mainColor-3;
+                >span{
+                    display: none;
+                }
+                &.active{
+                    background-color: $mainColor-2;
+                }
+                &::after{
+                    position: absolute;
+                    content: '';
+                    width: 60px;
+                    height: 20px;
+                    top: -8px;
+                    right: 62px;
+                }
+                &:hover{
+                    &::after{
+                        color: $mainColor-2;
+                    }
+                }
+            }
+            &:nth-child(1){
+                display: none;
+            }
+            &:nth-child(2){
+                >a::after{
+                    content: '이용안내';
+                }
+            }
+            &:nth-child(3){
+                >a::after{
+                    content: '일정안내';
+                }
+            }
+            &:nth-child(4){
+                >a::after{
+                    content: '공지사항';
+                }
+            }
+            &:nth-child(5){
+                >a::after{
+                    content: '기념행사';
+                }
+            }
+            &:nth-child(6){
+                display: none;
+            }
+        }
     }
 }

@@ -2,16 +2,16 @@
 function mainSlideFnc() {
     $('.bg-slide').bxSlider({
         mode: 'horizontal',
-        speed : 1000,
-        pager : true,
+        speed: 1000,
+        pager: true,
         moveSlides: 1,
-        responsive : true,
+        responsive: true,
         auto: true,
         useCSS: true,
         shrinkItems: true,
         pager: true,
         controls: false,
-        autoHover : true
+        autoHover: true
     });
 }
 //row3-calendar(datepicker)
@@ -49,8 +49,19 @@ function subSlideFnc() {
         controls: true
     });
 }
+
+//tnb
+// function tnbFnc() {
+//     if ($('.row1-wrap').hasClass('active')) {
+//         $('header').style.top = "0px"
+//     } else {
+//         $('header').style.top = "-100px"
+//     }
+// }
+
 $(function () {
     mainSlideFnc();
     calendarFnc();
     subSlideFnc();
+    //tnbFnc();
 });
