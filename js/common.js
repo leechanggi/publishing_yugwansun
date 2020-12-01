@@ -87,7 +87,7 @@ function openSmlMenuFnc() {
 
 //subpage search Fnc
 function subSearchFnc() {
-    $('.sub-search-txt').keydown(function () {
+    $('.sub-search-txt').keyup(function () {
         if ($('.sub-search-txt').val() !== '') {
             $('.sub-search-wrap').addClass('on');
         } else {

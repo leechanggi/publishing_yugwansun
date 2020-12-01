@@ -806,7 +806,7 @@ body {
                 &:hover,
                 &:focus,
                 &.on {
-                    width: 240px;
+                    width: 320px;
 
                     .search {
                         input[type=submit] {
@@ -824,7 +824,7 @@ body {
                 .search {
                     label {
                         input[type=search] {
-                            min-width: 240px;
+                            min-width: 320px;
                             height: 40px;
                             border-radius: 20px;
                             padding-left: 20px;
