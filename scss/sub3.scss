@@ -850,7 +850,8 @@ body {
                             display: inline-block;
                             width: 100%;
                             height: 100%;
-                            &::before{
+
+                            &::before {
                                 position: absolute;
                                 content: '';
                                 width: 20px;
@@ -861,7 +862,8 @@ body {
                                 background-size: cover;
                                 z-index: 1;
                             }
-                            &::after{
+
+                            &::after {
                                 position: absolute;
                                 content: '';
                                 width: 20px;
@@ -998,7 +1000,7 @@ body {
                 }
             }
 
-            .btn-write{
+            .btn-write {
                 display: block;
                 width: 100px;
                 height: 40px;
@@ -1009,11 +1011,256 @@ body {
                 margin: 0 0 0 calc(100% - 100px);
             }
 
+            .write-pop-wrap {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+                z-index: 1;
+                &.on{
+                    display: block;
+                }
+
+                .write-pop {
+                    position: absolute;
+                    top: calc(50% - 400px);
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 760px;
+                    height: 800px;
+                    background-color: $backgroundColor-1;
+
+                    >.pop-top {
+                        position: relative;
+                        width: 100%;
+                        height: 80px;
+                        background-color: $mainColor-1;
+                        color: #fff;
+
+                        >h4 {
+                            width: 200px;
+                            height: 80px;
+                            line-height: 80px;
+                            font-size: 32px;
+                            text-indent: 40px;
+                            font-family: '국립박물관문화재단클래식B', sans-serif;
+                        }
+
+                        >a {
+                            position: absolute;
+                            top: 25px;
+                            right: 20px;
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+
+                    >.pop-sec1 {
+                        width: 100%;
+                        height: 220px;
+                        padding: 20px;
+
+                        >h5 {
+                            font-size: 22px;
+                            margin: 10px 0 5px;
+                        }
+
+                        >p {
+                            font-size: 18px;
+                            padding: 5px;
+                            word-break: keep-all;
+                            border: 1px solid #ccc;
+                            color: #222;
+                            background-color: #fff;
+                        }
+
+                        >table {
+                            text-align: center;
+                            width: 720px;
+                            border: 1px solid #ccc;
+                            margin: 10px 0 10px;
+
+                            >thead {
+                                background-color: #f4f4f4;
+
+                                >tr {
+                                    border-bottom: 1px solid #ccc;
+
+                                    >th {
+                                        border-right: 1px solid #ccc;
+
+                                        &:last-child {
+                                            border-right: none;
+                                        }
+                                    }
+                                }
+                            }
+
+                            >tbody {
+                                >tr {
+                                    td {
+                                        border-right: 1px solid #ccc;
+                                        background-color: #fff;
+                                    }
+                                }
+                            }
+                        }
+
+                        >span {
+                            font-size: 14px;
+                            color: #222;
+                        }
+
+                        input[type=radio] {
+                            appearance: none;
+                            position: relative;
+                            top: 5px;
+                            right: 1px;
+                            background: url(../img/sub3/element_radio.png) no-repeat 0 0;
+                            width: 20px;
+                            height: 20px;
+                        }
+
+                        input[type=radio]:checked {
+                            background: url(../img/sub3/element_radio.png) no-repeat 0 100%;
+                        }
+
+                        label {
+                            font-size: 14px;
+                        }
+                    }
+
+                    >.pop-sec2 {
+                        width: 100%;
+                        height: 500px;
+                        padding: 20px;
+
+                        >ul {
+                            >li {
+                                span {
+                                    display: inline-block;
+                                    width: 50px;
+                                    height: 40px;
+                                    line-height: 40px;
+                                }
+
+                                &:nth-child(1) {
+                                    width: 720px;
+                                    height: 40px;
+                                    line-height: 40px;
+
+                                    >p {
+                                        font-size: 22px;
+                                    }
+
+                                    >input[type=text] {
+                                        width: 666px;
+                                        height: 30px;
+                                        border: 1px solid #ccc;
+                                    }
+                                }
+
+                                &:nth-child(2) {
+                                    width: 720px;
+                                    height: 40px;
+                                    line-height: 40px;
+
+                                    >p {
+                                        font-size: 22px;
+                                    }
+
+                                    >input[type=text] {
+                                        width: 200px;
+                                        height: 30px;
+                                        border: 1px solid #ccc;
+                                    }
+
+                                    input[type=radio] {
+                                        appearance: none;
+                                        position: relative;
+                                        top: 5px;
+                                        right: 1px;
+                                        background: url(../img/sub3/element_radio.png) no-repeat 0 0;
+                                        width: 20px;
+                                        height: 20px;
+                                    }
+                                    input[type=radio]:checked {
+                                        background: url(../img/sub3/element_radio.png) no-repeat 0 100%;
+                                    }
+                                }
+
+                                &:nth-child(3){
+                                    form{
+                                        position: relative;
+                                    }
+                                    margin-top: 5px;
+                                    textarea{
+                                        width: 720px;
+                                        height: 300px;
+                                        border: 1px solid #ccc;
+                                        resize: none;
+                                        font-size: 14px;
+                                        color: #222;
+                                    }
+                                    span{
+                                        position: relative;
+                                        display: block;
+                                        width: 88px;
+                                        height: 29px;
+                                        line-height: 29px;
+                                    }
+                                    .filebox label {
+                                        display: inline-block;
+                                        padding: 4px 15px;
+                                        color: #fff;
+                                        font-size: inherit;
+                                        line-height: normal;
+                                        vertical-align: middle;
+                                        background-color: #222;
+                                        cursor: pointer;
+                                    }
+
+                                    .filebox input[type=file] {
+                                        position: absolute;
+                                        top: 3px;
+                                        left: 15px;
+                                        width: 178px;
+                                        height: auto;
+                                        padding: 0;
+                                        margin: -1px;
+                                        border: none;
+                                        z-index: -1;
+                                        appearance: none;
+                                        -webkit-appearance: none;
+                                    }
+                                    input[type=button]{
+                                        position: absolute;
+                                        bottom: -35px;
+                                        right: 0;
+                                        width: 100px;
+                                        height: 35px;
+                                        line-height: 35px;
+                                        background-color: $mainColor-1;
+                                        color: #fff;
+                                        border: 1px solid #ccc;
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
             >.pager-list-wrap {
                 width: 1200px;
                 margin: 0 auto;
                 padding-bottom: 100px;
-
+    
                 >.pager-wrap {
                     margin: 60px auto 120px;
                     width: 450px;
@@ -1021,27 +1268,27 @@ body {
                     line-height: 45px;
                     overflow: hidden;
                     text-align: center;
-
+    
                     >ul>li {
                         float: left;
                         width: 50px;
                         height: 45px;
                         font-size: 18px;
-
+    
                         >a {
                             display: block;
                             width: 100%;
                             height: 100%;
                         }
                     }
-
+    
                     .first>a {
                         position: relative;
                         float: left;
                         width: 50px;
                         height: 45px;
                         text-indent: -9999px;
-
+    
                         &::before {
                             position: absolute;
                             content: '';
@@ -1052,14 +1299,14 @@ body {
                             left: calc(50% - 7px);
                         }
                     }
-
+    
                     .prev>a {
                         position: relative;
                         float: left;
                         width: 50px;
                         height: 45px;
                         text-indent: -9999px;
-
+    
                         &::before {
                             position: absolute;
                             content: '';
@@ -1070,14 +1317,14 @@ body {
                             left: calc(50% - 7px);
                         }
                     }
-
+    
                     .next>a {
                         position: relative;
                         float: left;
                         width: 50px;
                         height: 45px;
                         text-indent: -9999px;
-
+    
                         &::before {
                             position: absolute;
                             content: '';
@@ -1088,14 +1335,14 @@ body {
                             left: calc(50% - 7px);
                         }
                     }
-
+    
                     .last>a {
                         position: relative;
                         float: left;
                         width: 50px;
                         height: 45px;
                         text-indent: -9999px;
-
+    
                         &::before {
                             position: absolute;
                             content: '';
@@ -1106,11 +1353,11 @@ body {
                             left: calc(50% - 7px);
                         }
                     }
-
+    
                     .pagerList {
                         .pageNumber {
                             background-color: $backgroundColor-1;
-
+    
                             &:hover a,
                             &.active a {
                                 background-color: $mainColor-1;
@@ -1118,7 +1365,7 @@ body {
                             }
                         }
                     }
-
+    
                 }
             }
         }

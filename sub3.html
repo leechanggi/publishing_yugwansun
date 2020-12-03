@@ -299,20 +299,23 @@
                         </tr>
                     </tbody>
                 </table>
-                <a class="btn-write" href="#">글쓰기</a>
+                <a class="btn-write" href="#none">글쓰기</a>
                 <div class="write-pop-wrap">
                     <div class="write-pop">
-                        <h4>글쓰기</h4>
+                        <div class="pop-top">
+                            <h4>글쓰기</h4>
+                            <a href="#none" class="btn-pop-close"><img src="./img/sub3/cancel.png" alt="글쓰기 팝업창 닫기"></a>
+                        </div>
                         <div class="pop-sec1">
-                            <p>개인정보 수집 &middot; 이용 동의</p>
+                            <h5>개인정보 수집 &middot; 이용 동의</h5>
                             <p>천안시에서는 게시판 운영을 위해 제15조 제1항에 따라 아래와 같이 개인정보를 수집 및 이용하며, 수집된 개인정보는 목적 이외의 용도로는 이용되지 않습니다.
                             </p>
                             <table>
                                 <caption>개인정보 수집 이용 동의</caption>
                                 <colgroup>
-                                    <col>
-                                    <col>
-                                    <col>
+                                    <col style="width: 33.33%;">
+                                    <col style="width: 33.33%;">
+                                    <col style="width: 33.33%;">
                                 </colgroup>
                                 <thead>
                                     <tr>
@@ -324,39 +327,38 @@
                                 <tbody>
                                     <tr>
                                         <td>게시판 운영</td>
-                                        <td>성명, DI값</td>
+                                        <td>성명, ID</td>
                                         <td>5년</td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <p>이와 같은 개인정보 수집ㆍ이용에 대한 동의를 거부할 수 있으며, 거부할 경우 게시판 이용이 제한됩니다.</p>
+                            <span>이와 같은 개인정보 수집ㆍ이용에 대한 동의를 거부할 수 있으며, 거부할 경우 게시판 이용이 제한됩니다.</span>
                             <label><input type="radio" name="sec1Agr" value="agr" checked>동의함</label>
                             <label><input type="radio" name="sec1Agr" value="nagr">동의안함</label>
                         </div>
                         <div class="pop-sec2">
                             <ul>
                                 <li>
-                                    <p>제목</p>
+                                    <span>제목</span>
                                     <input type="text" name="title" id="title">
                                 </li>
                                 <li>
-                                    <p>작성자</p>
+                                    <span>작성자</span>
                                     <input type="text" name="userName" id="userName">
-                                </li>
-                                <li>
                                     <label><input type="radio" name="openAgr" value="open" checked>공개</label>
                                     <label><input type="radio" name="openAgr" value="close">비공개</label>
                                 </li>
                                 <li>
                                     <form action="#" method="POST">
                                         <textarea name="pop-sec2-txtarea" id="pop-sec2-txtarea" class="pop-sec2-txtarea"
-                                            cols="30" rows="10" placeholder="최대 300자까지 작성가능합니다."></textarea>
-                                        <input type="file" name="fileName" id="fileName">
-                                        <input type="button" value="저장">
+                                            placeholder="최대 1000자까지 작성가능합니다."></textarea>
+                                        <span class="filebox">
+                                            <label for="ex_file">파일첨부</label> <input type="file" id="ex_file">
+                                        </span>
+                                        <input type="button" value="작성완료">
                                     </form>
                                 </li>
                             </ul>
-
                         </div>
                     </div>
                 </div>
