@@ -19,14 +19,13 @@ $(function () {
 });
 
 //btnSub3pop
-function btnSub3pop(e) {
+function btnSub3pop() {
     $('.btn-write').click(function () {
         $('.write-pop-wrap').addClass('on');
     })
     $('.btn-pop-close').click(function () {
-            $('.write-pop-wrap').removeClass('on');
-        })
-        (e).preventDefault();
+        $('.write-pop-wrap').removeClass('on');
+    })
 }
 
 $(function () {

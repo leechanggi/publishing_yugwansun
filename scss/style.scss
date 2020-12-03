@@ -71,7 +71,7 @@ body {
                         >a {
                             font-family: '국립박물관문화재단클래식L', sans-serif;
 
-                            &:hover {
+                            &:hover, &:focus {
                                 color: $mainColor-2;
                             }
                         }
@@ -121,7 +121,7 @@ body {
                     line-height: 45px;
                     border-bottom: 1px solid #ccc;
 
-                    &:hover {
+                    &:hover, &:focus {
                         background-color: $mainColor-2;
                         color: #fff;
                         font-weight: bold;
@@ -165,7 +165,7 @@ body {
         z-index: 97;
 
         &:hover,
-        :focus {
+        &:focus {
             top: 0;
 
             .all-menu-info-wrap {
@@ -266,7 +266,7 @@ body {
                         margin-right: 0px;
                     }
 
-                    &:hover {
+                    &:hover, &:focus {
                         color: #fff;
                     }
 
@@ -299,7 +299,7 @@ body {
                                     -webkit-transition: width 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
                                 }
 
-                                &:hover {
+                                &:hover, &:focus {
                                     color: $mainColor-2;
 
                                     &::after {
@@ -364,7 +364,7 @@ body {
                             -webkit-transition: width 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
                         }
 
-                        &:hover {
+                        &:hover, &:focus {
                             color: $mainColor-2;
 
                             &::after {
@@ -403,7 +403,7 @@ body {
                                 }
                             }
 
-                            &:hover {
+                            &:hover, &:focus {
                                 >a {
                                     font-weight: bold;
 
@@ -417,6 +417,16 @@ body {
                 }
             }
         }
+    }
+
+    >.btn-top{
+        width: 70px;
+        height: 70px;
+        border-radius: 35px;
+        box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.5);
+        position: fixed;
+        right: 30px;
+        bottom: 90px;
     }
 }
 
@@ -500,7 +510,7 @@ body {
                                     content: '';
                                     width: 0px;
                                     height: 3px;
-                                    background-color: $mainColor-5;
+                                    background-color: $mainColor-6;
                                     top: 0;
                                     left: 0;
                                     transition: all 3s ease-in;
@@ -592,7 +602,7 @@ body {
                     overflow: hidden;
                     transition: all .3s ease-in;
 
-                    &:hover {
+                    &:hover, &:focus {
                         background-color: $mainColor-2;
                     }
 
@@ -982,7 +992,7 @@ body {
                                         }
                                     }
 
-                                    &:hover {
+                                    &:hover, &:focus {
                                         background-color: $mainColor-2;
                                         color: #fff;
 
@@ -1260,14 +1270,13 @@ body {
                     top: -8px;
                     right: 62px;
                 }
-                &:hover{
+                &:hover, &:focus{
                     &::after{
                         color: $mainColor-2;
                     }
                 }
             }
             &:nth-child(1){
-                display: none;
             }
             &:nth-child(2){
                 >a::after{
