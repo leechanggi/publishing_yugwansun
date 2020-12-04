@@ -1,22 +1,2 @@
-@charset "UTF-8";
-@font-face {
-  font-family: '국립박물관문화재단클래식B';
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식B.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: '국립박물관문화재단클래식M';
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식M.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: '국립박물관문화재단클래식L';
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식L.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+@-webkit-keyframes error{0%{-webkit-transform:translateX(-8px);transform:translateX(-8px)}25%{-webkit-transform:translateX(8px);transform:translateX(8px)}50%{-webkit-transform:translateX(-8px);transform:translateX(-8px)}75%{-webkit-transform:translateX(8px);transform:translateX(8px)}}@keyframes error{0%{-webkit-transform:translateX(-8px);transform:translateX(-8px)}25%{-webkit-transform:translateX(8px);transform:translateX(8px)}50%{-webkit-transform:translateX(-8px);transform:translateX(-8px)}75%{-webkit-transform:translateX(8px);transform:translateX(8px)}}@font-face{font-family:'국립박물관문화재단클래식B';src:url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식B.woff") format("woff");font-weight:normal;font-style:normal}@font-face{font-family:'국립박물관문화재단클래식M';src:url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식M.woff") format("woff");font-weight:normal;font-style:normal}@font-face{font-family:'국립박물관문화재단클래식L';src:url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식L.woff") format("woff");font-weight:normal;font-style:normal}
 /*# sourceMappingURL=design.css.map */

@@ -21,6 +21,13 @@ $backgroundColor-1: #f6f6f6;
     overflow: hidden;
 }
 
+@keyframes error{
+    0% {transform: translateX(-8px);}
+    25% {transform: translateX(8px);}
+    50% {transform: translateX(-8px);}
+    75% {transform: translateX(8px);}
+}
+
 @font-face {
     font-family: '국립박물관문화재단클래식B';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식B.woff') format('woff');
