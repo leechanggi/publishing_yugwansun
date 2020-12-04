@@ -789,166 +789,41 @@ body {
         }
     }
 
-    .row2-wrap {
+    .row2-wrap{
         width: 100%;
         background-color: $backgroundColor-1;
-
-        .row2 {
+        .row2{
             width: 1200px;
-            height: auto;
             margin: 0 auto;
-
-            .login-form {
-                width: 500px;
-                height: auto;
-                border-radius: 15px;
+            >h3{
+                padding-top: 100px;
+                font-size: 36px;
+                text-align: center;
+            }
+            >p{
+                font-size: 20px;
+                text-align: center;
+                padding-top: 10px;
+            }
+            >.row2-agree1{
+                width: 1100px;
+                height: 500px;
                 margin: 0 auto;
-                padding-bottom: 200px;
-                color: #222;
-
-                h3 {
-                    font-size: 32px;
-                    padding-top: 200px;
-                    border-bottom: 1px solid $mainColor-1;
-                }
-
-                form {
+                overflow: hidden;
+                >h4{
+                    font-size: 26px;
                     padding-top: 40px;
-
-                    .int-area {
-                        position: relative;
-
-                        input {
-                            width: 100%;
-                            height: 60px;
-                            padding: 0 10px 10px;
-                            border: none;
-                            background-color: transparent;
-                            border-bottom: 1px solid #e2e2e2;
-                            font-size: 16px;
-                            color: #222;
-                            outline: none;
-                            appearance: none;
-                            -webkit-appearance: none;
-                            transition: all .3s ease;
-
-                            &:focus, &:valid{
-                                border-bottom: 1px solid $mainColor-1;
-                            }
-                            &:focus+label,
-                            &:valid+label {
-                                top: -10px;
-                                font-size: 16px;
-                                color: $mainColor-1;
-                            }
-                            &:focus+label~span,
-                            &:valid+label~span {
-                                &::after{
-                                    opacity: 1;
-                                }
-                            }
-                        }
-
-                        label {
-                            position: absolute;
-                            left: 10px;
-                            top: 13px;
-                            font-size: 18px;
-                            color: #999;
-                            transition: all .5s ease;
-                            
-                            &.error{
-                                color: #f00 !important;
-                                animation : error .3s ease;
-                                animation-iteration-count: 3;
-                            }
-                        }
-
-                        &:nth-child(1){
-                            span{
-                                &::after{
-                                    content: '';
-                                    display: block;
-                                    width: 16px;
-                                    height: 18px;
-                                    background: url(../img/sub4/icon_user.svg) no-repeat 50% 50%;
-                                    opacity: 0.6;
-                                }
-                            }
-                        }
-
-                        &:nth-child(2){
-                            span{
-                                &::after{
-                                    content: '';
-                                    display: block;
-                                    width: 16px;
-                                    height: 18px;
-                                    background: url(../img/sub4/icon_data.svg) no-repeat 50% 50%;
-                                    opacity: 0.6;
-                                }
-                            }
-                        }
-
-                        span{
-                            position: absolute;
-                            width: 16px;
-                            height: 18px;
-                            top: 13px;
-                            right: 20px;
-                        }
-
-                        &:first-child {
-                            margin-bottom: 40px;
-                        }
-
-                        
-                    }
-
-                    .btn-area {
-                        margin-top: 30px;
-                        >button{
-                            width: 100%;
-                            height: 50px;
-                            border: 1px solid $mainColor-1;
-                            background-color: transparent;
-                            color: $mainColor-1;
-                            font-size: 20px;
-                            cursor: pointer;
-                            transition: all 0.5s cubic-bezier(0, 0, 0.21, 0.87) 0s;
-                            &:hover{
-                                background-color: $mainColor-1;
-                                color: #fff;
-                            }
-                        }
-                    }
-
-                    .caption {
-                        text-align: center;
-                        margin-top: 30px;
-                        >a{
-                            position: relative;
-                            display: inline-block;
-                            margin-right: 25px;
-                            color: #444444;
-                            &:last-child{
-                                margin: 0;
-                                &::after{
-                                    display: none;
-                                }
-                            }
-                            &::after{
-                                position: absolute;
-                                content: '';
-                                width: 4px;
-                                height: 4px;
-                                border-radius: 2px;
-                                background-color: #999;
-                                top: 8px;
-                                right: -16px;
-                            }
-                        }
-                    }
+                    padding-bottom: 20px;
+                }
+                >.row2-agree1-txt{
+                    width: 1100px;
+                    height: 360px;
+                    overflow-x: auto;
+                    overflow-y: scroll;
+                    padding: 10px;
+                    font-size: 16px;
+                    color: #222;
+                    border: 1px solid #ccc;
                 }
             }
         }

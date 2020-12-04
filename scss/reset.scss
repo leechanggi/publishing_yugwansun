@@ -1,11 +1,6 @@
 @charset 'utf-8';
 @import "design";
 
-body {
-    font: 16px/1.4 'NanumBarunGothic', Malgun Gothic, "맑은 고딕", "dotum", "돋움", "AppleGothic", sans-serif;
-    font-weight: normal;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -21,6 +16,7 @@ input,
 textarea,
 select {
     border-radius: none;
+    outline: none
 }
 
 fieldset {
@@ -58,6 +54,7 @@ h4,
 h5,
 h6 {
     font-size: 100%;
+    font-weight: normal;
 }
 
 address,

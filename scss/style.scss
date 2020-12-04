@@ -2,7 +2,6 @@
 @import "design";
 @import "reset";
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
-@import url("https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css");
 
 body {
     font: 16px/1.4 'NanumBarunGothic', Malgun Gothic, "맑은 고딕", "dotum", "돋움", "AppleGothic", sans-serif;
@@ -124,7 +123,6 @@ body {
                     &:hover, &:focus {
                         background-color: $mainColor-2;
                         color: #fff;
-                        font-weight: bold;
                     }
 
                     &:last-child {
@@ -405,7 +403,6 @@ body {
 
                             &:hover, &:focus {
                                 >a {
-                                    font-weight: bold;
 
                                     &::after {
                                         width: 100%;
@@ -798,7 +795,7 @@ body {
                                     >.ui-datepicker-today {
                                         >a {
                                             color: $mainColor-2 !important;
-                                            font-weight: bold !important;
+                                            font-weight: 700 !important;
                                             position: relative !important;
 
                                             &::before {
@@ -1224,7 +1221,6 @@ body {
                     float: right;
                     font-size: 36px;
                     font-family: '국립박물관문화재단클래식B', sans-serif;
-                    font-weight: bold;
                     color: #fff;
                     right: 30px;
             
@@ -1277,6 +1273,7 @@ body {
                 }
             }
             &:nth-child(1){
+                display: none;
             }
             &:nth-child(2){
                 >a::after{
