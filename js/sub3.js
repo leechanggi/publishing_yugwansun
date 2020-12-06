@@ -1,4 +1,3 @@
-//sub3calendarFnc
 $(function () {
     $("#sdate").datepicker({
         dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
@@ -17,8 +16,6 @@ $(function () {
         showButtonPanel: true
     });
 });
-
-//btnSub3pop
 function btnSub3pop() {
     $('.btn-write').click(function () {
         $('.write-pop-wrap').addClass('on');
@@ -27,7 +24,6 @@ function btnSub3pop() {
         $('.write-pop-wrap').removeClass('on');
     })
 }
-
 $(function () {
     btnSub3pop();
 });

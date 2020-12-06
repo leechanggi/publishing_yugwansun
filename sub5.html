@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="./js/jquery-2.0.3.min.js"></script>
     <script src="./js/jquery-ui.min.js"></script>
-    <!-- <script src="./js/sub5.js"></script> -->
+    <script src="./js/sub6.js"></script>
     <script src="./js/common.js"></script>
     <link rel="stylesheet" href="./css/jquery-ui.css">
     <link rel="stylesheet" href="./css/sub5.css">
@@ -220,6 +220,11 @@
             <div class="row2">
                 <h3>회원가입</h3>
                 <p>회원가입약관 및 개인정보처리방침안내 약관에 동의하셔야 회원가입 하실 수 있습니다.</p>
+                <div class="row2-agreeAll">
+                    <input type="checkbox" name="agreeAll" id="agreeAll" title="이용약관 동의">
+                    <label for="agreeAll">모두 동의합니다.</label>
+                    <p>이용약관, 개인정보 수집 및 이용에 대한 내용에 모두 동의합니다.</p>
+                </div>
                 <div class="row2-agree1">
                     <h4>이용약관</h4>
                     <div class="row2-agree1-txt">
@@ -466,7 +471,7 @@
                         </p>
                     </div>
                     <div class="row2-agree1-checkbox">
-                        <input type="checkbox" name="agree1" id="agree1" title="이용약관 동의">
+                        <input type="checkbox" name="agree1" id="agree1" title="이용약관 동의" class="agree" required>
                         <label for="agree1">홈페이지 이용약관에 동의합니다.</label>
                     </div>
                 </div>
@@ -483,13 +488,13 @@
                             - 정보주체의 권리 : 본인에 관한 개인정보 열람, 정정.삭제 청구권
                         </p>
                     </div>
-                    <div>
-                        <input type="checkbox" name="agree2" id="agree2" title="개인정보 수집 및 이용동의">
+                    <div class="row2-agree2-checkbox">
+                        <input type="checkbox" name="agree2" id="agree2" title="개인정보 수집 및 이용동의" class="agree" required>
                         <label for="agree2">개인정보 수집 및 이용에 동의합니다.</label>
                     </div>
                 </div>
-                <div class="btn_area">
-                    <input type="submit" class="button black" value="약관동의">
+                <div class="btn-area">
+                    <input type="submit" value="약관동의" class="agreeMain">
                     <a href="#"><span>메인으로</span></a>
                 </div>
             </div>
