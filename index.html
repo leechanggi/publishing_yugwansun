@@ -186,8 +186,6 @@
                 <div class="bg-slide">
                     <div class="bg-slide-1">
                         <img src="./img/main/bg-slide1.png" alt="항거 : 영화로 보는 유관순열사 이야기">
-                        <span class="bg-slide-txt1">내 손톱이 빠져나가고,<br>내 귀와 코가 잘리고,<br>내 손과 다리가 부러져도</span>
-                        <span class="bg-slide-txt2">그 고통만은 견딜수있사오나<br>나라를 잃어버린<br>그 고통만은 견딜수가 없습니다.</span>
                     </div>
                     <div class="bg-slide-2">
                         <img src="./img/main/bg-slide2.png" alt="유관순 열사 순국 100주년 온라인 추모 분향소">
@@ -458,8 +456,10 @@
                 console.log('direction===>', direction);
                 if ($('.row1-wrap').hasClass('active')) {
                     $('header').css('top', 0);
+                    $('#fp-nav').css('opacity','0');
                 } else {
                     $('header').css('top', '-100px');
+                    $('#fp-nav').css('opacity','1');
                 }
             }
         });

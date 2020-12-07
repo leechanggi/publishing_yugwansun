@@ -2,16 +2,14 @@
 function mainSlideFnc() {
     $('.bg-slide').bxSlider({
         mode: 'horizontal',
-        speed: 500,
+        speed: 700,
         pager: true,
         moveSlides: 1,
         responsive: true,
         auto: true,
         useCSS: true,
         shrinkItems: true,
-        pager: true,
-        controls: false,
-        autoHover: true
+        controls: true,
     });
 }
 //row3-calendar(datepicker)
