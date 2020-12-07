@@ -49,7 +49,6 @@ function subSlideFnc() {
         controls: true
     });
 }
-
 $(function () {
     mainSlideFnc();
     calendarFnc();

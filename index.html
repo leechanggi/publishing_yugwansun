@@ -323,7 +323,60 @@
                 </div>
             </div>
         </div>
-        <div class="section fp-auto-height sec6 row6-wrap">
+        <div class="section sec6 row6-wrap">
+            <div class="row6">
+                <h2>
+                    <em>오시는 길</em>
+                </h2>
+                <div>
+                    <div class="row6-map" id="map" style="width:500px;height:570px;">
+                    </div>
+                    <div class="row6-txt">
+                        <ul>
+                            <li>대중 교통
+                                <ul>
+                                    <li>서울
+                                        <ul>
+                                            <li>철도 : 서울역, 영등포역 - 천안역(첫차 05:30, 막차 23:55, 1시간 소요)</li>
+                                            <li>버스 : 강남, 동서울 터미널 - 천안 종합 터미널(첫차 06:00, 막차 21:20, 15분 간격)</li>
+                                            <li>고속철도 : 서울역 - 천안아산역(첫차 05:30, 막차 22:30, 40분 소요)</li>
+                                            <li>지하철(1호선) : 첫차 05:48(청량리 - 천안), 막차 02:20(구로 - 천안역)</li>
+                                        </ul>
+                                    </li>
+                                    <li>대전
+                                        <ul>
+                                            <li>철도 : 대전역, 서대전역 - 천안역(첫차 06:30, 막차 02:40, 15분 간격, 1시간 소요)</li>
+                                            <li>버스 : 고속, 동부 시외버스 터미널 - 천안 종합 터미널(첫차 06:30, 막차 21:00, 20분 간격)
+                                            </li>
+                                            <li>고속철도 : 대전역 - 천안아산역(첫차 : 06:20, 막차 22:57)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>현지교통
+                                <ul>
+                                    <li>대중 교통
+                                        <ul>
+                                            <li>천안역, 터미널에서 직행버스 운행(30분 소요, 493번 버스 이용)</li>
+                                            <li>천안역, 터미널에서 시내버스 운행(50분 소요, 400번대 버스 이용)</li>
+                                            <li>버스운행시간확인
+                                                <a href="#">버스 운행시간 확인</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>주차시설
+                                <ul>
+                                    <li>100대 수용(대형 40대, 소형 60대)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section fp-auto-height sec7 row7-wrap">
             <div class="footer-wrap">
                 <div class="footer-section1">
                     <ul>
@@ -358,12 +411,45 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6710b757aefbab7150eb363667f3e85f">
+    </script>
+    <script>
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+            mapOption = {
+                center: new kakao.maps.LatLng(36.75975721147881, 127.3080954132914), // 지도의 중심좌표
+                level: 4 // 지도의 확대 레벨
+            };
+
+        var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+        // 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
+        var mapTypeControl = new kakao.maps.MapTypeControl();
+
+        // 지도에 컨트롤을 추가해야 지도위에 표시됩니다
+        // kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
+        map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+
+        // 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+        var zoomControl = new kakao.maps.ZoomControl();
+        map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
+        // 마커가 표시될 위치입니다 
+        var markerPosition = new kakao.maps.LatLng(36.75975721147881, 127.3080954132914);
+
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);
+    </script>
     <script type="text/javascript" src="https://alvarotrigo.com/fullPage/vendors/scrolloverflow.js"></script>
     <script type="text/javascript" src="https://alvarotrigo.com/fullPage/fullpage.js"></script>
-
     <script type="text/javascript">
         var myFullpage = new fullpage('#container', {
-            anchors: ['row1', 'row2', 'row3', 'row4', 'row5', 'footer'],
+            anchors: ['row1', 'row2', 'row3', 'row4', 'row5', 'row6', 'footer'],
             navigation: true,
             slidesNavigation: true,
             scrollOverflow: true,

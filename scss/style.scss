@@ -1163,8 +1163,99 @@ body {
             }
         }
     }
-
     >.row6-wrap {
+        width: 100%;
+        height: 950px;
+        background-color: #fff;
+
+        .row6 {
+            width: 1200px;
+            margin: 0 auto;
+            clear: both;
+
+            >h2 {
+                margin-top: 200px;
+                margin-bottom: 20px;
+                text-align: center;
+                font-family: '국립박물관문화재단클래식M', sans-serif;
+                font-size: 50px;
+
+                >em {
+                    color: $mainColor-2;
+                }
+            }
+            >div{
+                overflow: hidden;
+                clear: both;
+                width: 1180px;
+                margin: 0 auto;
+                .row6-map{
+                    width: 500px;
+                    height: 570px;
+                    margin-right: 30px;
+                    float: left;
+                }
+                .row6-txt{
+                    width: 650px;
+                    height: 570px;
+                    overflow: hidden;
+                    float: left;
+                    background-color: $mainColor-3;
+                    padding: 50px 15px;
+                    >ul{
+                        >li{
+                            position: relative;
+                            font-size: 20px;
+                            padding-left: 20px;
+                            line-height: 2;
+                            &::before{
+                                position: absolute;
+                                content: '';
+                                width: 14px;
+                                height: 14px;
+                                background: url(../img/main/title_icon.png) no-repeat 0 0;
+                                background-size: cover;
+                                top: 10px;
+                                left: 0px;
+                            }
+                            >ul{
+                                li{
+                                    position: relative;
+                                    font-size: 18px;
+                                    padding-left: 5px;
+                                    line-height: 1.4;
+                                    &::before{
+                                        position: absolute;
+                                        content: '';
+                                        width: 4px;
+                                        height: 4px;
+                                        background: url(../img/main/small_title_icon.png) no-repeat 0 0;
+                                        background-size: cover;
+                                        top: 8px;
+                                        left: -3px;
+                                    }
+
+                                    >ul{
+                                        >li{
+                                            font-size: 16px;
+                                            padding-left: 5px;
+                                            line-height: 1.4;
+                                            color: #444;
+                                            &::before{
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    >.row7-wrap {
 
         .footer-wrap {
             width: 100%;
@@ -1296,6 +1387,11 @@ body {
                 }
             }
             &:nth-child(6){
+                >a::after{
+                    content: '오시는길';
+                }
+            }
+            &:nth-child(7){
                 display: none;
             }
         }
