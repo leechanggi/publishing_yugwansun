@@ -33,7 +33,7 @@ function calendarFnc() {
 }
 
 //row4-subslide(bxSlider)
-function subSlideFnc() {
+function row4subSlideFnc() {
     $('.row4-subslide').bxSlider({
         slideWidth: 320,
         moveSlides: 1,
@@ -47,8 +47,31 @@ function subSlideFnc() {
         controls: true
     });
 }
+
+//row5-subslide(bxSlider)
+function row5subSlideFnc() {
+    var winWidth = $(this).innerWidth();
+    if(winWidth <= 767){
+        $('.row5-box-wrap').bxSlider({
+            slideWidth: 300,
+            moveSlides: 1,
+            minSlides: 1,
+            maxSlides: 3,
+            auto: true,
+            useCSS: true,
+            shrinkItems: true,
+            slideMargin: 30,
+            pager: false,
+            controls: true
+        });
+    }
+}
+
+
+
 $(function () {
     mainSlideFnc();
     calendarFnc();
-    subSlideFnc();
+    row4subSlideFnc();
+    row5subSlideFnc()
 });

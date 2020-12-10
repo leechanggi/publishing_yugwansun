@@ -1,3 +1,31 @@
+// html - pc || tab_mob
+$(window).on('resize', windeowResizeHandler);
+
+function windeowResizeHandler() {
+    var winWidth = $(this).innerWidth();
+    if (winWidth >= 1200) {
+        $('html').removeClass('tab_mob')
+        $('html').addClass('pc')
+    } else {
+        $('html').removeClass('pc')
+        $('html').addClass('tab_mob')
+    }
+}
+$(window).trigger('resize');
+
+var filter = "win16|win32|win64|mac|macintel";
+if (navigator.platform) {
+    if (filter.indexOf(navigator.platform.toLowerCase()) >= 0) {
+        $(document).ready(function () {
+            var areaWidth = $("#footer").innerWidth();
+            $("#footer").css("width", areaWidth)
+            $(window).resize(function () {
+                location.reload();
+            })
+        })
+    }
+}
+
 // gnb //
 function gnbFnc() {
     var $firstMenu = $('.gnb > ul > li'),
@@ -17,8 +45,13 @@ function gnbFnc() {
 //all-menu-btn
 function openmenu() {
     $('#btnAllmenu').click(function () {
-        var menu = document.getElementById("allmenuInfo");
-        menu.style.top = "0";
+        if ($('html').hasClass('pc')) {
+            var menu = document.getElementById("allmenuInfo");
+            menu.style.top = "0";
+        } else if($('html').hasClass('tab_mob')){
+            var menu = document.getElementById("allmenuMobile");
+            menu.style.left = "0";
+        }
     })
 }
 
@@ -27,6 +60,27 @@ function closemenu() {
         var menu = document.getElementById("allmenuInfo");
         menu.style.top = "-100vh";
     })
+    $('#btnAllmenuMobClose').click(function () {
+        var menu = document.getElementById("allmenuMobile");
+        menu.style.left = "-100vw"
+    })
+}
+
+function allmenuMobFnc() {
+    $('.all-menu-active').click(function () {
+        if ($('html').hasClass('tab_mob')) {
+            $(this).siblings('.all-menu-respon').slideToggle()
+            // $(this).siblings('.all-menu-respon').slideUp();
+            if ($(this).hasClass('on')) {
+                $(this).siblings().removeClass('on');
+                $(this).removeClass('on');
+            } else {
+                $(this).addClass('on').siblings().removeClass('on');
+            }
+        } else if($('html').hasClass('pc')){
+            $(this).find('.all-menu-active.on').removeClass('on');
+        }
+    });
 }
 
 //btnInfo
@@ -107,6 +161,7 @@ $(function () {
     stickyGnbFnc();
     openSmlMenuFnc();
     subSearchFnc();
+    allmenuMobFnc()
 });
 
 //numbering
