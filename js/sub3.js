@@ -24,6 +24,7 @@ $(function () {
         showButtonPanel: true
     });
 });
+
 function btnSub3pop() {
     $('.btn-write').click(function () {
         $('.write-pop-wrap').addClass('on');
@@ -32,6 +33,16 @@ function btnSub3pop() {
         $('.write-pop-wrap').removeClass('on');
     })
 }
+
+function popTxtareaFnc() {
+    $('#pop-sec2-txtarea').keyup(function () {
+        var content = $(this).val();
+        $('#counter').html(content.length + '/1000');
+    });
+    $('#content').keyup();
+}
 $(function () {
     btnSub3pop();
+    popTxtareaFnc();
+    popTxtareaFnc();
 });

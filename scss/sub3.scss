@@ -185,6 +185,7 @@ body {
             position: relative;
             width: 100%;
             height: 100%;
+            z-index: 97;
 
             &::before {
                 content: '';
@@ -457,7 +458,7 @@ body {
                     transform: translateX(-50%);
                     width: 100%;
                     height: 500px;
-                    background: url(../img/sub1/main-img.png) no-repeat 0 0;
+                    background: url(../img/sub1/main-img.png) no-repeat 50% 50%;
                     content: '';
                     z-index: -2;
                 }
@@ -504,7 +505,7 @@ body {
                 &.sticky {
                     position: fixed;
                     top: 0;
-                    z-index: 1;
+                    z-index: 2;
                 }
 
                 .row1-smlMenu {
@@ -904,7 +905,7 @@ body {
                     }
 
                     &:nth-child(4) {
-                        width: 200px;
+                        width: 180px;
                         height: 40px;
                         margin: 3px 0;
                         border-radius: 5px;
@@ -915,7 +916,7 @@ body {
                             >input[type=text] {
                                 position: relative;
                                 display: inline-block;
-                                width: 130px;
+                                width: 126px;
                                 height: 40px;
                                 top: -2px;
                                 border: 1px solid #ccc;
@@ -940,13 +941,13 @@ body {
                 width: calc(100% - 40px);
                 margin: 50px 20px 20px;
                 text-align: center;
-                border-top: 2px solid $mainColor-1;
 
                 >thead {
                     >tr {
                         height: 55px;
                         background-color: $mainColor-4;
                         font-size: 17px;
+                        border-top: 2px solid $mainColor-1;
 
                         >th {
                             border-right: 1px solid #ccc;
@@ -1184,6 +1185,7 @@ body {
                                     margin-top: 5px;
 
                                     textarea {
+                                        position: relative;
                                         width: 720px;
                                         height: 300px;
                                         border: 1px solid #ccc;
@@ -1192,7 +1194,19 @@ body {
                                         color: #222;
                                     }
 
-                                    span {
+                                    >form >p{
+                                        position: absolute;
+                                        bottom: 38px;
+                                        right: 5px;
+                                        color: #757575;
+                                        font-size: 14px;
+                                        >span{
+                                            width: auto;
+                                            height: auto;
+                                        }
+                                    }
+
+                                    >span {
                                         position: relative;
                                         display: block;
                                         width: 88px;
@@ -1204,17 +1218,19 @@ body {
                                         display: inline-block;
                                         padding: 4px 15px;
                                         color: #fff;
-                                        font-size: inherit;
-                                        line-height: normal;
                                         vertical-align: middle;
                                         background-color: #222;
                                         cursor: pointer;
+                                        width: 100px;
+                                        height: 35px;
+                                        line-height: 30px;
+                                        text-align: center;
                                     }
 
                                     .filebox input[type=file] {
                                         position: absolute;
-                                        top: 3px;
-                                        left: 15px;
+                                        top: 315px;
+                                        left: 25px;
                                         width: 178px;
                                         height: auto;
                                         padding: 0;
@@ -1498,6 +1514,7 @@ body {
             >td {
                 padding: 0;
                 border: none;
+
                 >a {
                     background-color: $mainColor-3 !important;
                     border: none !important;
@@ -1773,23 +1790,37 @@ body {
                 }
             }
         }
-        .row2-wrap{
-            .row2{
+
+        .row2-wrap {
+            .row2 {
                 width: 100%;
-                
-                .formList{
-                    >div{
-                        &:nth-child(2){
+
+                .formList {
+                    clear: both;
+
+                    >div {
+                        &:nth-child(1) {
+                            display: none;
                         }
-                        &:nth-child(4){
+
+                        &:nth-child(2) {
+                            float: left;
+                            margin: 0;
+                        }
+
+                        &:nth-child(3) {
+                            float: left;
+                        }
+
+                        &:nth-child(4) {
+                            float: right;
                         }
                     }
 
                 }
 
-
-                .pager-list-wrap{
-                    display: none;
+                .pager-list-wrap {
+                    width: 100%;
                 }
             }
         }
@@ -2098,6 +2129,155 @@ body {
             }
         }
 
+        .row2-wrap {
+            .row2 {
+                width: 100%;
+
+                .formList {
+                    clear: both;
+                    height: 130px;
+
+                    >div {
+                        &:nth-child(1) {
+                            display: none;
+                        }
+
+                        &:nth-child(2) {
+                            float: left;
+                            margin: 0;
+                        }
+
+                        &:nth-child(3) {
+                            float: left;
+                        }
+
+                        &:nth-child(4) {
+                            float: right;
+                        }
+                    }
+
+                }
+
+                .board-table{
+                    >thead{
+                        display: none;
+                    }
+                    >tbody{
+                        >tr{
+                            >td{
+                                border-right: none;
+                                display: block;
+                                height: 30px;
+                                line-height: 30px;
+                                &:nth-child(1){
+                                    border-bottom: none;
+                                    text-align: left;
+                                    text-indent: 10px;
+                                }
+                                &:nth-child(2){
+                                    border-bottom: none;
+                                    @include lineClamp(30px,1)
+                                }
+                                &:nth-child(3){
+                                    position: relative;
+                                    text-align: left;
+                                    text-indent: 80px;
+                                    &::before{
+                                        position: absolute;
+                                        content: '등록일 :';
+                                        width: 140px;
+                                        height: 30px;
+                                        line-height: 30px;
+                                        left: -55px;
+                                    }
+                                }
+                                &:nth-child(4){
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .write-pop-wrap{
+                    width: 100%;
+                    .write-pop{
+                        width: 98.95833333333333vw;
+                        min-width: 360px;
+                        min-height: 100vh;
+                        overflow: scroll;
+
+                        .pop-sec1{
+                            height: auto;
+                            >table{
+                                width: 100%
+                            }
+                        }
+
+                        .pop-sec2{
+                            height: auto;
+                            >ul{
+                                >li{
+                                    &:nth-child(1){
+                                        width: 100%;
+                                        >input[type=text]{
+                                            width: 75%;
+                                        }
+                                    }
+                                    &:nth-child(2){
+                                        width: 100%;
+                                        >input[type=text]{
+                                            width: 40%;
+                                        }
+                                    }
+                                    &:nth-child(3){
+                                        textarea{
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .pager-list-wrap {
+                    width: 100%;
+                    padding-bottom: 13.02083333333333vw; //100px(768)
+
+                    >.pager-wrap {
+                        margin: 7.8125vw auto 15.625vw; //60px auto 120px(768)
+                        width: 58.59375vw; //450px(768)
+                        min-width: 300px;
+
+                        >ul>li {
+                            width: 6.510416666666667vw; //50px(768)
+                            min-width: 33.33333333333333px;
+                        }
+
+                        .first>a {
+                            width: 6.510416666666667vw; //50px(768)
+                            min-width: 33.33333333333333px;
+                        }
+
+                        .prev>a {
+                            width: 6.510416666666667vw; //50px(768)
+                            min-width: 33.33333333333333px;
+                        }
+
+                        .next>a {
+                            width: 6.510416666666667vw; //50px(768)
+                            min-width: 33.33333333333333px;
+                        }
+
+                        .last>a {
+                            width: 6.510416666666667vw; //50px(768)
+                            min-width: 33.33333333333333px;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     #footer {
