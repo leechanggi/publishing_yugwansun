@@ -1172,7 +1172,12 @@ body {
   text-align: center;
 }
 
-#container .row2-wrap .row2 > .btn-area > input[type=submit] {
+#container .row2-wrap .row2 > .btn-area > a {
+  border: none;
+  background-color: transparent;
+}
+
+#container .row2-wrap .row2 > .btn-area > a > input[type=submit] {
   display: inline-block;
   width: 100px;
   height: 45px;
@@ -1186,7 +1191,7 @@ body {
   transition: all 0.5s cubic-bezier(0, 0, 0.21, 0.87) 0s;
 }
 
-#container .row2-wrap .row2 > .btn-area > input[type=submit]:hover, #container .row2-wrap .row2 > .btn-area > input[type=submit]:focus {
+#container .row2-wrap .row2 > .btn-area > a > input[type=submit]:hover, #container .row2-wrap .row2 > .btn-area > a > input[type=submit]:focus {
   background-color: #1C356F;
 }
 
