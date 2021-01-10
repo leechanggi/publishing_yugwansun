@@ -884,6 +884,15 @@ body {
   text-indent: 23px;
 }
 
+#container > .row2-wrap .row2 > ul > li > ul li:nth-of-type(1) {
+  font-size: 24px;
+  text-indent: 0;
+}
+
+#container > .row2-wrap .row2 > ul > li > ul li:nth-of-type(1)::before {
+  display: none;
+}
+
 #container > .row2-wrap .row2 > ul > li > ul li::before {
   content: '';
   position: absolute;
@@ -1568,6 +1577,10 @@ body {
 #container > .row7-wrap .footer-wrap > .footer-section2 > .footer-txt {
   float: left;
   padding-left: 10px;
+}
+
+#container > .row7-wrap .footer-wrap > .footer-section2 > .footer-txt span {
+  display: block;
 }
 
 #container > .row7-wrap .footer-wrap > .footer-section2 > .footer-logo {

@@ -1007,6 +1007,9 @@ body {
         >.footer-txt {
             float: left;
             padding-left: 10px;
+            span{
+                display: block;
+            }
         }
 
         >.footer-logo {

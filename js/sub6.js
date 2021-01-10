@@ -149,7 +149,7 @@ function userSubmitFnc() {
             alert('회원가입에 필요한 필수 항목을 입력해주세요.');
         } else {
             alert('회원가입이 완료되었습니다. 로그인 페이지로 이동합니다.');
-            window.location.replace('../sub4.html')
+            location.href = "http://lxyex1379.dothome.co.kr/yugwansun-private-origin/sub4.html";
         }
     })
 }

@@ -1623,6 +1623,10 @@ body {
   padding-left: 10px;
 }
 
+#footer > .footer-section2 > .footer-txt span {
+  display: block;
+}
+
 #footer > .footer-section2 > .footer-logo {
   position: relative;
   float: right;

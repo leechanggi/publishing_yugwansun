@@ -664,6 +664,13 @@ body {
                         font-size: 24px;
 
                         li {
+                            &:nth-of-type(1){
+                                font-size: 24px;
+                                text-indent: 0;
+                                &::before{
+                                    display: none;
+                                }
+                            }
                             position: relative;
                             font-size: 18px;
                             text-indent: 23px;
@@ -1384,6 +1391,9 @@ body {
                 >.footer-txt {
                     float: left;
                     padding-left: 10px;
+                    span{
+                        display: block;
+                    }
                 }
 
                 >.footer-logo {
